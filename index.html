@@ -340,9 +340,9 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
           <li style="display: grid; grid-template-columns: 16px 1fr; gap: 10px; font-size: 15px; line-height: 22px"><span style="color: var(--color-accent-700); font-weight: 600; font-size: 12px; line-height: 22px">+</span><span>Project closeout and completion assignments</span></li>
           <li style="display: grid; grid-template-columns: 16px 1fr; gap: 10px; font-size: 15px; line-height: 22px"><span style="color: var(--color-accent-700); font-weight: 600; font-size: 12px; line-height: 22px">+</span><span>Luxury residential and complex-interior projects</span></li>
         </ul>
-        <figure style="margin: 28px 0 0; display: grid; grid-template-columns: 72px 1fr; gap: 16px; align-items: center; padding: 16px; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-card); max-width: 420px">
-          <div role="img" aria-label="Portrait of David Reich — replace with /images/dr-portrait.jpg" class="image-slot" data-image-id="dr-portrait" style="width:72px; height:72px; aspect-ratio:1; border-radius:50%; background: color-mix(in srgb, var(--color-text) 6%, transparent); border:1.5px dashed color-mix(in srgb, var(--color-text) 14%, transparent); display:flex; align-items:center; justify-content:center; text-align:center; padding:6px; color: var(--color-muted); font-size:9px; line-height:1.3; flex-shrink:0;">Portrait<br><span style="font-size:8px; opacity:0.7">72×72</span></div>
-          <figcaption style="font-size: 12.5px; line-height: 1.45; color: var(--color-muted)"><span style="font-family: var(--font-heading); font-weight:600; color: var(--color-text); font-size:13px">David Reich</span><br>Forty years in the field. Now taking select South Florida work. One photo, down where you can reach me.</figcaption>
+        <figure style="margin: 32px 0 0; display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: center; padding: 20px; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-card); max-width: 480px">
+          <div role="img" aria-label="Portrait of David Reich — replace with /images/dr-portrait.jpg" class="image-slot" data-image-id="dr-portrait" style="width:120px; height:120px; aspect-ratio:1; border-radius:50%; background: color-mix(in srgb, var(--color-text) 6%, transparent); border:1.5px dashed color-mix(in srgb, var(--color-text) 14%, transparent); display:flex; align-items:center; justify-content:center; text-align:center; padding:8px; color: var(--color-muted); font-size:11px; line-height:1.3; flex-shrink:0;">Portrait<br><span style="font-size:9px; opacity:0.7">120×120</span></div>
+          <figcaption style="font-size: 13.5px; line-height: 1.5; color: var(--color-muted)"><span style="font-family: var(--font-heading); font-weight:600; color: var(--color-text); font-size:15px">David Reich</span><br>Forty years in the field. Now taking select South Florida work. One photo, down where you can reach me.</figcaption>
         </figure>
       </div>
       <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
@@ -367,7 +367,6 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
           </div>
           <button type="button" class="btn btn-primary btn-block" aria-label="Send project inquiry">Send inquiry</button>
         </div>
-        <p style="font-size: 13px; line-height: 24px; color: var(--color-muted); margin: 12px 0 0">Or write directly, <a href="mailto:david@example.com" aria-label="Email David Reich">david@example.com</a></p>
       </div>
     </div>
 </section>
@@ -393,8 +392,8 @@ document.querySelectorAll('.btn.btn-primary.btn-block').forEach(btn => {
       const email = document.querySelector('#dr-email-i, #dr-email-b, #dr-email')?.value?.trim();
       const note = document.querySelector('#dr-note-i, #dr-note-b, #dr-note')?.value?.trim();
       if (!email || !note) { alert('Add your email and a short note about the project.'); return; }
-      // For now, mailto fallback, wire to Resend / Formspree / Vercel Function later
-      location.href = `mailto:david@example.com?subject=Project inquiry from ${encodeURIComponent(email)}&body=${encodeURIComponent(note + "\n\n,  " + email)}`;
+      // TODO: wire to real contact email before publishing — form currently shows interim message
+      alert('Thanks for your inquiry. The contact form will be wired to David\'s real email before launch — for now, please check back soon.'); return;
     });
   }
 });
