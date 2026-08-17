@@ -1,0 +1,11 @@
+{
+  "name": "david-reich-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "David Reich — Construction & Development Advisory. Built from Blueprint direction.",
+  "scripts": {
+    "build": "echo 'static site — no build'",
+    "dev": "npx serve ."
+  },
+  "engines": { "node": ">=18" }
+}

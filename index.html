@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>David Reich — Construction & Development Advisory</title>
+<meta name="description" content="David Reich — Owner's Representation, Senior Project Oversight, Closeout & Turnover. 40 years, South Florida: Miami, Fort Lauderdale, Palm Beach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ── Design system — maintain long-term by editing these tokens ── */
+:root{
+  --color-bg: #fdfbf7;
+  --color-surface: #ffffff;
+  --color-text: #1a1c1e;
+  --color-muted: color-mix(in srgb, var(--color-text) 62%, transparent);
+  --color-faint: color-mix(in srgb, var(--color-text) 42%, transparent);
+  --color-divider: #e9e0d4;
+  --color-divider-strong: #d8cfc0;
+  --color-accent-700: #b85c1a;
+  --color-accent-800: #8a3f0e;
+  --font-heading: "Instrument Serif", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --max: 1296px;
+  --pad: clamp(20px, 5vw, 72px);
+}
+*{ box-sizing:border-box }
+html{ scroll-behavior:smooth }
+body{ margin:0; background:var(--color-bg); color:var(--color-text); font-family:var(--font-body); text-wrap:pretty; -webkit-font-smoothing:antialiased }
+a{ color:var(--color-accent-700); text-underline-offset:3px; text-decoration-thickness:1px }
+a:hover{ color:var(--color-accent-800) }
+::selection{ background: color-mix(in srgb, var(--color-accent-700) 18%, transparent) }
+/* Maintainable utilities — the original used inline styles per element; keep visual parity but centralize tokens here */
+.nav{ position:sticky; top:0; z-index:20; backdrop-filter:saturate(1.1) blur(8px); background: color-mix(in srgb, var(--color-bg) 88%, transparent); border-bottom:1px solid var(--color-divider) }
+.nav-inner{ max-width:var(--max); margin:0 auto; padding:14px var(--pad); display:flex; align-items:center; gap:18px; flex-wrap:wrap }
+.nav-brand{ letter-spacing:0.06em; text-transform:uppercase; font-weight:700; font-size:13px; margin-right:auto }
+.nav a:not(.btn){ font-size:12px; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; color:inherit; opacity:0.72; font-weight:500 }
+.nav a:not(.btn):hover{ opacity:1 }
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 18px; border-radius:999px; font-size:12px; font-weight:650; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; border:1px solid var(--color-text); line-height:1 }
+.btn-primary{ background:var(--color-text); color:#fff; border-color:var(--color-text) }
+.btn-primary:hover{ background:#0f0f10; color:#fff }
+.btn-block{ width:100% }
+.table{ width:100%; border-collapse:collapse }
+.corner{ position:absolute; width:14px; height:14px; border:1px solid #9a8f85; pointer-events:none }
+.corner.tl{ top:-7px; left:-7px; border-right:0; border-bottom:0 }
+.corner.tr{ top:-7px; right:-7px; border-left:0; border-bottom:0 }
+.corner.bl{ bottom:-7px; left:-7px; border-right:0; border-top:0 }
+.corner.br{ bottom:-7px; right:-7px; border-left:0; border-top:0 }
+.input{ width:100%; padding:11px 14px; border:1px solid var(--color-divider-strong); border-radius:10px; font:14px var(--font-body); background:#fff }
+.input:focus{ outline:2px solid var(--color-accent-700); outline-offset:2px; border-color:var(--color-accent-700) }
+.field label{ display:block; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.6; margin-bottom:8px; font-weight:600 }
+@media (max-width: 900px){ .nav-inner{ gap:10px } .nav a:not(.btn):not(.nav-brand){ display:none } }
+</style>
+</head>
+<body>
+
+
+
+<nav class="nav" style="position: sticky; top: 0; z-index: 5; background: var(--color-bg); max-width: 1296px; margin: 0 auto; padding: 14px clamp(20px, 5vw, 72px)">
+  <span class="nav-brand" style="letter-spacing: 0.04em; text-transform: uppercase">David Reich</span>
+  <a href="#capability">Capability</a>
+  <a href="#services">Services</a>
+  <a href="#experience">Experience</a>
+  <a href="#engage">Engage</a>
+  <a class="btn btn-primary" href="#engage" style="text-decoration: none">Start a conversation</a>
+</nav>
+
+<div style="max-width: 1296px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px)">
+
+  <section style="display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 24px clamp(32px, 6vw, 96px); align-items: end; padding: 72px 0 96px">
+    <div>
+      <h1 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(52px, 7.4vw, 104px); line-height: 1.02; letter-spacing: 0.01em; text-transform: uppercase; margin: 0 0 0 -0.052em">
+        <span style="display: block">David</span>
+        <span style="display: block">Reich</span>
+      </h1>
+      <p style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(20px, 2.2vw, 27px); line-height: 24px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 36px 0 12px">Construction &amp; Development Advisory</p>
+      <hr style="height: 1px; border: 0; margin: 0 0 12px; background: var(--color-divider)" />
+      <p style="font-size: 13px; line-height: 24px; letter-spacing: 0.08em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 0">Owner's Representation · Project Leadership · Construction Advisory · Luxury Residential</p>
+    </div>
+    <div>
+      <figure class="blueprint duotone" style="margin: 0">
+        <div class="image-slot" data-image-id="dr-portrait" style="width:100%; aspect-ratio:4/5; background: color-mix(in srgb, var(--color-text) 6%, transparent); border:1px dashed color-mix(in srgb, var(--color-text) 15%, transparent); border-radius:4px; display:flex; align-items:center; justify-content:center; text-align:center; padding:24px; color: color-mix(in srgb, var(--color-text) 45%, transparent); font-size:12px; line-height:1.4;">Drop a portrait of David — site or office, landscape or 4:5<br><span style="font-size:11px; opacity:0.7">→ replace with <code>/images/dr-portrait.jpg</code></span></div>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </figure>
+    </div>
+  </section>
+
+  <section style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 24px clamp(32px, 6vw, 96px); padding: 0 0 96px">
+    <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.04; letter-spacing: 0.01em; text-transform: uppercase; margin: 0">Experienced leadership for complicated projects.</h2>
+    <div>
+      <p style="font-size: 17px; line-height: 28px; margin: 0 0 24px; max-width: 58ch">I help owners, developers and construction teams move complex projects from planning through execution, closeout and delivery.</p>
+      <p style="font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: 0 0 24px; max-width: 60ch">My experience spans virtually every side of the development and construction process: owner's representation, ground-up development, general contracting, real estate investment, property operations and hands-on construction management.</p>
+      <p style="font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: 0 0 24px; max-width: 60ch">Today, I bring that experience to select projects requiring senior-level judgment, practical field knowledge and direct accountability.</p>
+      <p style="font-family: var(--font-heading); font-weight: 600; font-size: 18px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">Available for consulting, owner's-representation and project-leadership engagements in South Florida.</p>
+    </div>
+  </section>
+
+  <section id="capability" style="padding: 0 0 96px">
+    <div style="position: relative; border: 1px solid var(--color-divider)">
+      <i class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+      <i class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+      <i class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+      <i class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+      <header style="display: flex; flex-wrap: wrap; align-items: stretch; border-bottom: 1px solid var(--color-divider); font-family: var(--font-body)">
+        <span style="flex: 1; min-width: 16ch; padding: 12px 24px; font-size: 13px; line-height: 24px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600">Capability record — D. Reich</span>
+        <span style="border-left: 1px solid var(--color-divider); white-space: nowrap; padding: 12px 24px; font-size: 13px; line-height: 24px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Since 1986</span>
+        <span style="border-left: 1px solid var(--color-divider); white-space: nowrap; padding: 12px 24px; font-size: 13px; line-height: 24px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 70%, transparent)">South Florida</span>
+        <span style="border-left: 1px solid var(--color-divider); white-space: nowrap; padding: 12px 24px; font-size: 13px; line-height: 24px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Sheet 01</span>
+      </header>
+      <table class="table" style="table-layout: fixed">
+        <colgroup><col style="width: 72px" /><col style="width: 30%" /><col style="width: 21%" /><col /></colgroup>
+        <thead>
+          <tr>
+            <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">No.</th>
+            <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Measure</th>
+            <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Value</th>
+            <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 12px 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); vertical-align: middle">01</td>
+            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; vertical-align: middle">Years in construction and development</td>
+            <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 24px; line-height: 24px; letter-spacing: 0.02em; white-space: nowrap; vertical-align: middle">40</td>
+            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); vertical-align: middle">Continuous, 1986 to present</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); vertical-align: middle">02</td>
+            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; vertical-align: middle">Largest development managed</td>
+            <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 24px; line-height: 24px; letter-spacing: 0.02em; white-space: nowrap; vertical-align: middle">$200M</td>
+            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); vertical-align: middle">259-unit luxury high-rise, New York City</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); vertical-align: middle">03</td>
+            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; vertical-align: middle">Sides of the table worked</td>
+            <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 24px; line-height: 24px; letter-spacing: 0.02em; white-space: nowrap; vertical-align: middle">5</td>
+            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); vertical-align: middle">Owner, developer, contractor, operator, project manager</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); vertical-align: middle">04</td>
+            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; vertical-align: middle">Current market</td>
+            <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 24px; line-height: 24px; letter-spacing: 0.02em; white-space: nowrap; vertical-align: middle">South FL</td>
+            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); border-bottom: 0; vertical-align: middle">Miami · Fort Lauderdale · Palm Beach</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin: 0; padding: 12px 24px; border-top: 1px solid var(--color-divider); font-size: 13px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Full employment history and dates are maintained on LinkedIn.</p>
+    </div>
+  </section>
+
+  <section id="services" style="padding: 0 0 96px">
+    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">02 · How I can help</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 32px; background: var(--color-divider)" />
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(24px, 3vw, 48px)">
+      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Owner's Representation</h3>
+        <p style="font-size: 15px; line-height: 24px; margin: 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Represent ownership throughout design and construction — coordinating architects, consultants, contractors and stakeholders while protecting schedule, budget, quality and the owner's priorities.</p>
+      </div>
+      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Senior Project Oversight</h3>
+        <p style="font-size: 15px; line-height: 24px; margin: 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Experienced leadership when a project needs additional management capacity, troubleshooting or independent oversight: schedule review, contractor coordination, field-condition resolution, quality control, logistics and executive reporting.</p>
+      </div>
+      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Closeout &amp; Turnover</h3>
+        <p style="font-size: 15px; line-height: 24px; margin: 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Move a project through the hardest stage — substantial completion to actual delivery. Punch-list management, finish completion, owner and contractor coordination, turnover activities and support for Temporary Certificates of Occupancy.</p>
+      </div>
+      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Luxury Interiors &amp; Complex Finishes</h3>
+        <p style="font-size: 15px; line-height: 24px; margin: 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Specialized oversight for high-end residential and hospitality-quality interiors: stone, tile, marble, custom slabs, mosaics, specialty flooring and detailed finish packages.</p>
+      </div>
+      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Development &amp; Construction Advisory</h3>
+        <p style="font-size: 15px; line-height: 24px; margin: 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Advise owners and development teams on project planning, construction strategy, budgeting, contractor relationships, sequencing, procurement and execution.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" style="padding: 0 0 96px">
+    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">03 · Selected experience</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider)" />
+
+    <div style="display: grid; grid-template-columns: 48px minmax(0, 4fr) minmax(0, 6fr); gap: 12px clamp(20px, 3vw, 48px); align-items: start; border-top: 1px solid var(--color-divider); padding: 24px 0">
+      <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); line-height: 26px">01</span>
+      <div>
+        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">The Well</h3>
+        <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 0">Bay Harbor Islands, Florida</p>
+      </div>
+      <p style="font-size: 15px; line-height: 24px; margin: 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Senior project management and completion oversight for a luxury residential condominium and Class A office development. Residential units, office buildouts, public areas and amenities — finish installation, punch-list completion, turnover and TCO-related coordination.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 48px minmax(0, 4fr) minmax(0, 6fr); gap: 12px clamp(20px, 3vw, 48px); align-items: start; border-top: 1px solid var(--color-divider); padding: 24px 0">
+      <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); line-height: 26px">02</span>
+      <div>
+        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">Forte Condominium</h3>
+        <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 0">West Palm Beach, Florida</p>
+      </div>
+      <p style="font-size: 15px; line-height: 24px; margin: 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Project management for high-end interior finish installations in a luxury high-rise: marble, limestone, porcelain, custom slabs and glass. Subcontractor coordination, logistics and sequencing, with progress tracked across hundreds of installation milestones.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 48px minmax(0, 4fr) minmax(0, 6fr); gap: 12px clamp(20px, 3vw, 48px); align-items: start; border-top: 1px solid var(--color-divider); padding: 24px 0">
+      <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); line-height: 26px">03</span>
+      <div>
+        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">Banyan Tree Residences Sales Gallery</h3>
+        <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 0">West Palm Beach, Florida</p>
+      </div>
+      <p style="font-size: 15px; line-height: 24px; margin: 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Oversight of interior and exterior tile, stone, mosaic and wood-flooring installations. Managed crews, scheduling, procurement and deliveries, with field coordination among ownership, construction management and multiple trades.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 48px minmax(0, 4fr) minmax(0, 6fr); gap: 12px clamp(20px, 3vw, 48px); align-items: start; border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 24px 0">
+      <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); line-height: 26px">04</span>
+      <div>
+        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">$200M Luxury Residential Development</h3>
+        <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 0">New York City</p>
+      </div>
+      <p style="font-size: 15px; line-height: 24px; margin: 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">As Vice President Development, Project Executive and Owner's Representative, managed the development of a 259-unit luxury high-rise — contract negotiations, budgeting, architects and consultants, construction oversight, stakeholder coordination and project delivery.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 0 96px">
+    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">04 · Every side of the table</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider)" />
+    <table class="table" style="table-layout: fixed">
+      <colgroup><col style="width: 30%" /><col style="width: 14%" /><col /></colgroup>
+      <thead>
+        <tr>
+          <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Role</th>
+          <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Years</th>
+          <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">What it covered</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; vertical-align: middle">Developer / Owner's Rep</td>
+          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 70%, transparent); white-space: nowrap; vertical-align: middle">1986–1994</td>
+          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); vertical-align: middle">Major ground-up residential, commercial, retail and mixed-use development.</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; vertical-align: middle">Construction Company Principal</td>
+          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 70%, transparent); white-space: nowrap; vertical-align: middle">1994–2002</td>
+          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); vertical-align: middle">Founded and operated contracting businesses performing high-end interiors, commercial construction and general contracting.</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; vertical-align: middle">Real Estate Owner / Operator</td>
+          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 70%, transparent); white-space: nowrap; vertical-align: middle">2002–2006</td>
+          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); vertical-align: middle">Acquisition, repositioning, capital improvements, leasing and management of multifamily properties.</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; vertical-align: middle">Operating Executive</td>
+          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 70%, transparent); white-space: nowrap; vertical-align: middle">2007–2024</td>
+          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); vertical-align: middle">Seventeen years managing production, procurement, supply chain, vendors, budgeting and business operations.</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; border-bottom: 0; vertical-align: middle">Senior Project Manager</td>
+          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 70%, transparent); white-space: nowrap; border-bottom: 0; vertical-align: middle">2024–Present</td>
+          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); border-bottom: 0; vertical-align: middle">Field-level execution of luxury residential and mixed-use projects in South Florida.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 24px clamp(32px, 5vw, 96px); align-items: center; padding: 0 0 96px">
+    <div>
+      <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.06; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 24px">More than one perspective on the same problem</h2>
+      <p style="font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: 0; max-width: 48ch">That breadth allows me to approach construction problems from more than one perspective. I understand what ownership needs, what the project team needs, and what it takes to actually execute the work in the field.</p>
+    </div>
+    <figure class="blueprint duotone" style="margin: 0">
+      <div class="image-slot" data-image-id="dr-project" style="width:100%; aspect-ratio:4/5; background: color-mix(in srgb, var(--color-text) 6%, transparent); border:1px dashed color-mix(in srgb, var(--color-text) 15%, transparent); border-radius:4px; display:flex; align-items:center; justify-content:center; text-align:center; padding:24px; color: color-mix(in srgb, var(--color-text) 45%, transparent); font-size:12px; line-height:1.4;">Drop a project photograph — finished interior, stone install, or site<br><span style="font-size:11px; opacity:0.7">→ replace with <code>/images/dr-project.jpg</code></span></div>
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    </figure>
+  </section>
+
+  <section id="engage" style="padding: 0 0 72px">
+    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">05 · Engage David</span>
+    <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider)" />
+    <div style="display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 32px clamp(32px, 5vw, 96px); align-items: start">
+      <div>
+        <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.06; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 24px">Available for select engagements</h2>
+        <ul style="list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; max-width: 52ch">
+          <li style="display: grid; grid-template-columns: 20px 1fr; gap: 12px; font-size: 16px; line-height: 24px"><span style="color: var(--color-accent-700); font-weight: 600">+</span><span>Owner's representative assignments</span></li>
+          <li style="display: grid; grid-template-columns: 20px 1fr; gap: 12px; font-size: 16px; line-height: 24px"><span style="color: var(--color-accent-700); font-weight: 600">+</span><span>Construction and development consulting</span></li>
+          <li style="display: grid; grid-template-columns: 20px 1fr; gap: 12px; font-size: 16px; line-height: 24px"><span style="color: var(--color-accent-700); font-weight: 600">+</span><span>Senior project oversight</span></li>
+          <li style="display: grid; grid-template-columns: 20px 1fr; gap: 12px; font-size: 16px; line-height: 24px"><span style="color: var(--color-accent-700); font-weight: 600">+</span><span>Project closeout and completion assignments</span></li>
+          <li style="display: grid; grid-template-columns: 20px 1fr; gap: 12px; font-size: 16px; line-height: 24px"><span style="color: var(--color-accent-700); font-weight: 600">+</span><span>Luxury residential and complex-interior projects</span></li>
+        </ul>
+      </div>
+      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
+        <i class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <i class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
+        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px">Start a conversation</h3>
+        <p style="font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: 0 0 24px">Tell me about the project — stage, location, and what is in the way. I will tell you honestly whether I am the right person for it.</p>
+        <div style="display: grid; gap: 12px">
+          <div class="field">
+            <label for="dr-email-i">Email</label>
+            <input class="input" id="dr-email-i" type="email" placeholder="you@company.com" />
+          </div>
+          <div class="field">
+            <label for="dr-note-i">The project</label>
+            <textarea class="input" id="dr-note-i" placeholder="Location, stage, and what you need."></textarea>
+          </div>
+          <button type="button" class="btn btn-primary btn-block">Send</button>
+        </div>
+        <p style="font-size: 13px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 12px 0 0">Or write directly — <a href="mailto:david@example.com">david@example.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: baseline; border-top: 1px solid var(--color-divider); padding: 24px 0 48px; font-size: 13px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 70%, transparent)">
+    <span style="font-family: var(--font-heading); font-weight: 600; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text); margin-right: auto">David Reich · Construction &amp; Development Advisory</span>
+    <span>South Florida</span>
+    <a href="https://www.linkedin.com/">View full professional history on LinkedIn</a>
+  </footer>
+</div>
+
+<footer style="max-width:1296px; margin:0 auto; padding: 24px clamp(20px,5vw,72px) 56px; border-top:1px solid var(--color-divider); display:flex; flex-wrap:wrap; gap:14px 42px; font-size:13px; color:var(--color-muted)">
+  <span style="font-family:var(--font-heading); font-weight:600; color:var(--color-text); margin-right:auto">© 2026 David Reich — Construction & Development Advisory</span>
+  <span>South Florida · Miami · Fort Lauderdale · Palm Beach</span>
+</footer>
+<!-- Content is maintainable: edit this file directly, or replace image-slot divs with <img src="/images/dr-portrait.jpg">. Contact form posts to /api/contact (wire up in Vercel Functions when ready). -->
+<script>
+// Minimal contact handler — replace with real endpoint when you attach a form service
+document.querySelectorAll('.btn.btn-primary.btn-block').forEach(btn => {
+  if (btn.textContent.trim() === 'Send') {
+    btn.addEventListener('click', () => {
+      const email = document.querySelector('#dr-email-i, #dr-email-b, #dr-email')?.value?.trim();
+      const note = document.querySelector('#dr-note-i, #dr-note-b, #dr-note')?.value?.trim();
+      if (!email || !note) { alert('Add your email and a short note about the project.'); return; }
+      // For now, mailto fallback — wire to Resend / Formspree / Vercel Function later
+      location.href = `mailto:david@example.com?subject=Project inquiry from ${encodeURIComponent(email)}&body=${encodeURIComponent(note + "\n\n— " + email)}`;
+    });
+  }
+});
+</script>
+</body>
+</html>
