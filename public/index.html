@@ -116,6 +116,10 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
 }
 </style>
 
+@media (max-width: 900px){
+  section[style*="grid-template-columns: minmax(0, 1.15fr)"]{ grid-template-columns: 1fr !important; }
+}
+
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -133,14 +137,51 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
 
 <main id="main" style="max-width: 1296px; margin: 0 auto; padding: 0 var(--pad)">
 
-  <section style="padding: 56px 0 48px; border-bottom: 1px solid var(--color-divider); margin-bottom: 48px">
-    <p style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 650; color: var(--color-accent-700); margin: 0 0 20px">South Florida · Since 1986</p>
-    <h1 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(40px, 10vw, 84px); line-height: 0.95; letter-spacing: -0.03em; text-transform: uppercase; margin: 0; text-wrap:balance; font-kerning:normal; font-feature-settings:"kern" 1, "liga" 1; text-rendering:optimizeLegibility">
-      <span style="display: block">David</span>
-      <span style="display: block">Reich</span>
-    </h1>
-    <p style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(16px, 3.8vw, 21px); line-height: 1.3; letter-spacing: 0.11em; text-transform: uppercase; color: var(--color-accent-700); margin: 28px 0 18px; max-width: 38ch">Construction &amp; Development Advisory</p>
-    <p style="font-size: 13px; line-height: 1.6; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-muted); margin: 0; max-width: 62ch">Owner's Representation · Project Leadership · Construction Advisory · Luxury Residential — 40 years, $200M largest build, five sides of the table</p>
+  <section style="display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr); gap: 32px clamp(28px, 5vw, 56px); align-items: start; padding: 48px 0 48px; border-bottom: 1px solid var(--color-divider); margin-bottom: 48px">
+    <div style="min-width: 0">
+      <p style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 650; color: var(--color-accent-700); margin: 0 0 18px">South Florida · Since 1986</p>
+      <h1 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(40px, 10vw, 84px); line-height: 0.92; letter-spacing: -0.035em; text-transform: uppercase; margin: 0; text-wrap:balance; font-kerning:normal; font-feature-settings:"kern" 1, "liga" 1; text-rendering:optimizeLegibility">
+        <span style="display: block">David</span>
+        <span style="display: block">Reich</span>
+      </h1>
+      <p style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(16px, 3.8vw, 21px); line-height: 1.3; letter-spacing: 0.11em; text-transform: uppercase; color: var(--color-accent-700); margin: 26px 0 14px; max-width: 22ch">Construction &amp; Development Advisory</p>
+      <p style="font-size: 13px; line-height: 1.6; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-muted); margin: 0; max-width: 36ch">Owner's Representation · Project Leadership · Construction Advisory · Luxury Residential</p>
+    </div>
+    <div id="capability" style="position: relative; border: 1px solid var(--color-divider); border-radius: var(--radius-card); background: var(--color-surface); overflow: hidden; min-width: 0">
+      <i aria-hidden="true" class="corner tl" style="position: absolute; width: 12px; height: 12px; top: -6px; left: -6px; border-color: var(--color-divider-strong)"></i>
+      <i aria-hidden="true" class="corner tr" style="position: absolute; width: 12px; height: 12px; top: -6px; right: -6px; border-color: var(--color-divider-strong)"></i>
+      <i aria-hidden="true" class="corner bl" style="position: absolute; width: 12px; height: 12px; bottom: -6px; left: -6px; border-color: var(--color-divider-strong)"></i>
+      <i aria-hidden="true" class="corner br" style="position: absolute; width: 12px; height: 12px; bottom: -6px; right: -6px; border-color: var(--color-divider-strong)"></i>
+      <div style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--color-divider); background: color-mix(in srgb, var(--color-bg) 60%, var(--color-surface))">
+        <span style="font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--color-text)">Capability record — D. Reich</span>
+        <span style="margin-left: auto; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-muted); white-space: nowrap">Since 1986</span>
+      </div>
+      <dl style="margin: 0; padding: 8px 0 0; display: grid">
+        <div style="display: grid; grid-template-columns: 36px 1fr auto; gap: 12px; align-items: baseline; padding: 12px 16px; border-bottom: 1px solid color-mix(in srgb, var(--color-divider) 60%, transparent)">
+          <dt style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--color-accent-700)">01</dt>
+          <dd style="margin: 0; font-size: 13px; line-height: 1.4; color: var(--color-muted)">Years in construction</dd>
+          <dd style="margin: 0; font-family: var(--font-heading); font-weight: 600; font-size: 18px; line-height: 1; color: var(--color-text); text-align: right">40</dd>
+        </div>
+        <div style="display: grid; grid-template-columns: 36px 1fr auto; gap: 12px; align-items: baseline; padding: 12px 16px; border-bottom: 1px solid color-mix(in srgb, var(--color-divider) 60%, transparent)">
+          <dt style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--color-accent-700)">02</dt>
+          <dd style="margin: 0; font-size: 13px; line-height: 1.4; color: var(--color-muted)">Largest build</dd>
+          <dd style="margin: 0; font-family: var(--font-heading); font-weight: 600; font-size: 18px; line-height: 1; color: var(--color-text); text-align: right">$200M</dd>
+        </div>
+        <div style="display: grid; grid-template-columns: 36px 1fr auto; gap: 12px; align-items: baseline; padding: 12px 16px; border-bottom: 1px solid color-mix(in srgb, var(--color-divider) 60%, transparent)">
+          <dt style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--color-accent-700)">03</dt>
+          <dd style="margin: 0; font-size: 13px; line-height: 1.4; color: var(--color-muted)">Sides of the table</dd>
+          <dd style="margin: 0; font-family: var(--font-heading); font-weight: 600; font-size: 18px; line-height: 1; color: var(--color-text); text-align: right">5</dd>
+        </div>
+        <div style="display: grid; grid-template-columns: 36px 1fr auto; gap: 12px; align-items: baseline; padding: 12px 16px;">
+          <dt style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--color-accent-700)">04</dt>
+          <dd style="margin: 0; font-size: 13px; line-height: 1.4; color: var(--color-muted)">Current market</dd>
+          <dd style="margin: 0; font-family: var(--font-heading); font-weight: 600; font-size: 15px; line-height: 1; color: var(--color-text); text-align: right; white-space: nowrap">South FL</dd>
+        </div>
+      </dl>
+      <div style="padding: 10px 16px; border-top: 1px solid var(--color-divider); background: color-mix(in srgb, var(--color-bg) 45%, var(--color-surface))">
+        <p style="margin: 0; font-size: 11.5px; line-height: 1.4; color: var(--color-faint)">Miami · Fort Lauderdale · Palm Beach · <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" style="color: var(--color-muted); text-decoration: underline">Full history on LinkedIn ↗</a></p>
+      </div>
+    </div>
   </section>
 
   <section style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 24px clamp(32px, 6vw, 96px); padding: 0 0 96px">
@@ -153,58 +194,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
     </div>
   </section>
 
-  <section id="capability" style="padding: 0 0 96px">
-    <div style="position: relative; border: 1px solid var(--color-divider)">
-      <i aria-hidden="true" class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-      <i aria-hidden="true" class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-      <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-      <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-      <header style="display: flex; flex-wrap: wrap; align-items: stretch; border-bottom: 1px solid var(--color-divider); font-family: var(--font-body)">
-        <span style="flex: 1; min-width: 16ch; padding: 12px 24px; font-size: 13px; line-height: 24px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600">Capability record — D. Reich</span>
-        <span style="border-left: 1px solid var(--color-divider); white-space: nowrap; padding: 12px 24px; font-size: 13px; line-height: 24px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-muted)">Since 1986</span>
-        <span style="border-left: 1px solid var(--color-divider); white-space: nowrap; padding: 12px 24px; font-size: 13px; line-height: 24px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-muted)">South Florida</span>
-        <span style="border-left: 1px solid var(--color-divider); white-space: nowrap; padding: 12px 24px; font-size: 13px; line-height: 24px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-muted)">Sheet 01</span>
-      </header>
-      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch" role="region" aria-label="Capability record" tabindex="0"><table class="table"
-        <colgroup><col style="width: 72px" /><col style="width: 30%" /><col style="width: 21%" /><col /></colgroup>
-        <thead>
-          <tr>
-            <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: var(--color-muted)">No.</th>
-            <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: var(--color-muted)">Measure</th>
-            <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: var(--color-muted)">Value</th>
-            <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: var(--color-muted)">Remark</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="padding: 12px 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); vertical-align: middle">01</td>
-            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; vertical-align: middle">Years in construction and development</td>
-            <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 24px; line-height: 24px; letter-spacing: 0.02em; white-space: nowrap; vertical-align: middle">40</td>
-            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); vertical-align: middle">Continuous, 1986 to present</td>
-          </tr>
-          <tr>
-            <td style="padding: 12px 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); vertical-align: middle">02</td>
-            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; vertical-align: middle">Largest development managed</td>
-            <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 24px; line-height: 24px; letter-spacing: 0.02em; white-space: nowrap; vertical-align: middle">$200M</td>
-            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); vertical-align: middle">259-unit luxury high-rise, New York City</td>
-          </tr>
-          <tr>
-            <td style="padding: 12px 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); vertical-align: middle">03</td>
-            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; vertical-align: middle">Sides of the table worked</td>
-            <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 24px; line-height: 24px; letter-spacing: 0.02em; white-space: nowrap; vertical-align: middle">5</td>
-            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); vertical-align: middle">Owner, developer, contractor, operator, project manager</td>
-          </tr>
-          <tr>
-            <td style="padding: 12px 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); vertical-align: middle">04</td>
-            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; vertical-align: middle">Current market</td>
-            <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 24px; line-height: 24px; letter-spacing: 0.02em; white-space: nowrap; vertical-align: middle">South FL</td>
-            <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); border-bottom: 0; vertical-align: middle">Miami · Fort Lauderdale · Palm Beach</td>
-          </tr>
-        </tbody>
-      </table></div>
-      <p style="margin: 0; padding: 12px 24px; border-top: 1px solid var(--color-divider); font-size: 13px; line-height: 24px; color: var(--color-muted)">Full employment history and dates are maintained on LinkedIn.</p>
-    </div>
-  </section>
+  
 
   <section id="services" style="padding: 0 0 96px">
     <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">02 · How I can help</span>
