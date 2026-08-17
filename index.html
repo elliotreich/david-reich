@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>David Reich — Construction & Development Advisory</title>
-<meta name="description" content="David Reich — Owner's Representation, Senior Project Oversight, Closeout & Turnover. 40 years, South Florida: Miami, Fort Lauderdale, Palm Beach.">
+<title>David Reich, Construction & Development Advisory</title>
+<meta name="description" content="David Reich, Owner's Representation, Senior Project Oversight, Closeout & Turnover. 40 years, South Florida: Miami, Fort Lauderdale, Palm Beach.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ── Design system — maintain long-term by editing these tokens ── */
+/* ── Design system, maintain long-term by editing these tokens ── */
 :root{
   --color-bg: #fdfbf7;
   --color-surface: #ffffff;
   --color-text: #1e1c1a;
-  --color-muted: #6b5e52; /* 4.6:1 on #fdfbf7 — passes AA for 13-15px */
+  --color-muted: #6b5e52; /* 4.6:1 on #fdfbf7, passes AA for 13-15px */
   --color-faint: #8a7f74; /* 3.2:1 for large/caps, intentional */
   --color-divider: #e9e0d4;
   --color-divider-strong: #d0c4b2;
-  --color-accent-700: #9f4d0e; /* 4.8:1 on bg — was #b85c1a at 3.9:1 */
+  --color-accent-700: #9f4d0e; /* 4.8:1 on bg, was #b85c1a at 3.9:1 */
   --color-accent-800: #7a380a;
   --color-focus: #9f4d0e;
   --font-heading: "Instrument Serif", Georgia, serif;
@@ -40,11 +40,11 @@ a:hover{ color:var(--color-accent-800) }
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{ outline:2px solid var(--color-focus); outline-offset:3px; border-radius:2px }
 ::selection{ background: color-mix(in srgb, var(--color-accent-700) 18%, transparent) }
 
-/* Skip link — first Tab stop for keyboard/screen readers */
+/* Skip link, first Tab stop for keyboard/screen readers */
 .skip{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden }
 .skip:focus{ left:12px; top:12px; width:auto; height:auto; padding:10px 14px; background:var(--color-text); color:#fff; border-radius:999px; font-size:13px; font-weight:600; letter-spacing:0.04em; z-index:100; text-decoration:none }
 
-/* Nav — sticky with solid fallback for no backdrop-filter */
+/* Nav, sticky with solid fallback for no backdrop-filter */
 .nav{ position:sticky; top:0; z-index:20; background: color-mix(in srgb, var(--color-bg) 92%, white); border-bottom:1px solid var(--color-divider); }
 @supports (backdrop-filter: blur(8px)){
   .nav{ backdrop-filter:saturate(1.08) blur(10px); background: color-mix(in srgb, var(--color-bg) 86%, transparent); }
@@ -74,11 +74,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .error.on{ display:block }
 .image-slot{ width:100%; aspect-ratio:4/5; background: color-mix(in srgb, var(--color-text) 5%, transparent); border:1.5px dashed color-mix(in srgb, var(--color-text) 14%, transparent); border-radius:var(--radius-card); display:flex; align-items:center; justify-content:center; text-align:center; padding:24px; color: var(--color-muted); font-size:13px; line-height:1.5; }
 
-/* Mobile-first refinements — kerning + rhythm */
+/* Mobile-first refinements, kerning + rhythm */
 h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretionary-ligatures; font-kerning:normal; }
 @media (max-width: 900px){
   .nav-inner{ gap:8px; padding:10px var(--pad) }
-  .nav a:not(.btn):not(.nav-brand){ display:none } /* keep brand + CTA only — CTA stays tappable */
+  .nav a:not(.btn):not(.nav-brand){ display:none } /* keep brand + CTA only, CTA stays tappable */
   .nav .btn{ padding:11px 16px; font-size:12px }
 }
 
@@ -89,7 +89,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
 </style>
 
 <style>
-/* Mobile-first overrides — injected by polish pass */
+/* Mobile-first overrides, injected by polish pass */
 @media (max-width: 900px){
   /* Hero: stack, image below text, reduce vertical rhythm */
   section[style*="grid-template-columns: minmax(0, 7fr)"]{ grid-template-columns:1fr !important; gap:20px !important; padding:36px 0 40px !important; }
@@ -131,7 +131,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
   <a href="#services">Services</a>
   <a href="#experience">Experience</a>
   <a href="#engage">Engage</a>
-  <a class="btn btn-primary" href="#engage" aria-label="Start a conversation — jump to contact form" style="text-decoration: none">Start a conversation</a>
+
 </nav></header>
 
 <main id="main" style="max-width: 1296px; margin: 0 auto; padding: 0 var(--pad)">
@@ -152,7 +152,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
       <i aria-hidden="true" class="corner bl" style="position: absolute; width: 12px; height: 12px; bottom: -6px; left: -6px; border-color: var(--color-divider-strong)"></i>
       <i aria-hidden="true" class="corner br" style="position: absolute; width: 12px; height: 12px; bottom: -6px; right: -6px; border-color: var(--color-divider-strong)"></i>
       <div style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--color-divider); background: color-mix(in srgb, var(--color-bg) 60%, var(--color-surface))">
-        <span style="font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--color-text)">Capability record — D. Reich</span>
+        <span style="font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--color-text)">Capability record, D. Reich</span>
         <span style="margin-left: auto; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-muted); white-space: nowrap">Since 1986</span>
       </div>
       <dl style="margin: 0; padding: 8px 0 0; display: grid">
@@ -184,11 +184,11 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
   </section>
 
   <section style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 24px clamp(32px, 6vw, 96px); padding: 0 0 96px">
-    <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(26px, 7vw, 42px); line-height: 1.08; letter-spacing: -0.015em; text-transform: uppercase; margin: 0">Experienced leadership for complicated projects.</h2>
+    <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(26px, 7vw, 42px); line-height: 1.08; letter-spacing: -0.015em; text-transform: uppercase; margin: 0">You don’t need another manager. You need someone who has built it before.</h2>
     <div>
-      <p style="font-size: 17px; line-height: 28px; margin: 0 0 24px; max-width: 58ch">I help owners, developers and construction teams move complex projects from planning through execution, closeout and delivery.</p>
-      <p style="font-size: 15px; line-height: 24px; color: var(--color-muted); margin: 0 0 24px; max-width: 60ch">My experience spans virtually every side of the development and construction process: owner's representation, ground-up development, general contracting, real estate investment, property operations and hands-on construction management.</p>
-      <p style="font-size: 15px; line-height: 24px; color: var(--color-muted); margin: 0 0 24px; max-width: 60ch">Today, I bring that experience to select projects requiring senior-level judgment, practical field knowledge and direct accountability.</p>
+      <p style="font-size: 17px; line-height: 28px; margin: 0 0 24px; max-width: 58ch">I help owners and builders get complicated projects across the finish line. Planning, execution, closeout, delivery, I stay with it.</p>
+      <p style="font-size: 15px; line-height: 24px; color: var(--color-muted); margin: 0 0 24px; max-width: 60ch">I have worked every side of the table. Owner’s rep. Ground-up development. General contracting. Buying and repositioning property. Running operations. Hands-on construction management.</p>
+      <p style="font-size: 15px; line-height: 24px; color: var(--color-muted); margin: 0 0 24px; max-width: 60ch">Now I take on a few South Florida projects at a time. You get senior judgment, field knowledge, and a direct line to me.</p>
       <p style="font-family: var(--font-heading); font-weight: 600; font-size: 18px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">Available for consulting, owner's-representation and project-leadership engagements in South Florida.</p>
     </div>
   </section>
@@ -205,7 +205,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
         <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Owner's Representation</h3>
-        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">Represent ownership throughout design and construction — coordinating architects, consultants, contractors and stakeholders while protecting schedule, budget, quality and the owner's priorities.</p>
+        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I represent you in the room. I coordinate architects, consultants and contractors, and I protect your schedule, budget and quality.</p>
       </div>
       <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
         <i aria-hidden="true" class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
@@ -213,7 +213,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
         <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Senior Project Oversight</h3>
-        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">Experienced leadership when a project needs additional management capacity, troubleshooting or independent oversight: schedule review, contractor coordination, field-condition resolution, quality control, logistics and executive reporting.</p>
+        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">When a project needs more leadership, I step in. I review schedules, resolve field conditions, manage contractors, check quality, and keep reporting clear.</p>
       </div>
       <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
         <i aria-hidden="true" class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
@@ -221,7 +221,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
         <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Closeout &amp; Turnover</h3>
-        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">Move a project through the hardest stage — substantial completion to actual delivery. Punch-list management, finish completion, owner and contractor coordination, turnover activities and support for Temporary Certificates of Occupancy.</p>
+        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">The last ten percent is the hardest. I manage punch lists, finish the finishes, coordinate owner and contractor, and push through turnover and TCO.</p>
       </div>
       <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
         <i aria-hidden="true" class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
@@ -229,7 +229,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
         <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Luxury Interiors &amp; Complex Finishes</h3>
-        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">Specialized oversight for high-end residential and hospitality-quality interiors: stone, tile, marble, custom slabs, mosaics, specialty flooring and detailed finish packages.</p>
+        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I specialize in high-end interiors where finishes matter. Stone, tile, marble, custom slabs, mosaics, flooring, the details that clients actually see.</p>
       </div>
       <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
         <i aria-hidden="true" class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
@@ -237,7 +237,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
         <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Development &amp; Construction Advisory</h3>
-        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">Advise owners and development teams on project planning, construction strategy, budgeting, contractor relationships, sequencing, procurement and execution.</p>
+        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I advise owners on how to build it right. Planning, strategy, budget, contractor selection, sequence and procurement.</p>
       </div>
     </div>
   </section>
@@ -252,7 +252,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
         <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">The Well</h3>
         <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin: 0">Bay Harbor Islands, Florida</p>
       </div>
-      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">Senior project management and completion oversight for a luxury residential condominium and Class A office development. Residential units, office buildouts, public areas and amenities — finish installation, punch-list completion, turnover and TCO-related coordination.</p>
+      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I led closeout for a luxury condo and Class A office in Bay Harbor Islands. Units, offices, amenities, finishes, punch lists and TCO coordination.</p>
     </div>
 
     <div style="display: grid; grid-template-columns: 48px minmax(0, 4fr) minmax(0, 6fr); gap: 12px clamp(20px, 3vw, 48px); align-items: start; border-top: 1px solid var(--color-divider); padding: 24px 0">
@@ -261,7 +261,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
         <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">Forte Condominium</h3>
         <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin: 0">West Palm Beach, Florida</p>
       </div>
-      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">Project management for high-end interior finish installations in a luxury high-rise: marble, limestone, porcelain, custom slabs and glass. Subcontractor coordination, logistics and sequencing, with progress tracked across hundreds of installation milestones.</p>
+      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I managed high-end finishes for a luxury high-rise in West Palm Beach. Marble, limestone, porcelain, custom slabs and glass, sequenced and tracked across hundreds of installs.</p>
     </div>
 
     <div style="display: grid; grid-template-columns: 48px minmax(0, 4fr) minmax(0, 6fr); gap: 12px clamp(20px, 3vw, 48px); align-items: start; border-top: 1px solid var(--color-divider); padding: 24px 0">
@@ -270,7 +270,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
         <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">Banyan Tree Residences Sales Gallery</h3>
         <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin: 0">West Palm Beach, Florida</p>
       </div>
-      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">Oversight of interior and exterior tile, stone, mosaic and wood-flooring installations. Managed crews, scheduling, procurement and deliveries, with field coordination among ownership, construction management and multiple trades.</p>
+      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I ran tile, stone and wood flooring for the Banyan Tree sales gallery. Crews, schedule, procurement and field coordination across ownership and trades.</p>
     </div>
 
     <div style="display: grid; grid-template-columns: 48px minmax(0, 4fr) minmax(0, 6fr); gap: 12px clamp(20px, 3vw, 48px); align-items: start; border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 24px 0">
@@ -279,7 +279,7 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
         <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">$200M Luxury Residential Development</h3>
         <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin: 0">New York City</p>
       </div>
-      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">As Vice President Development, Project Executive and Owner's Representative, managed the development of a 259-unit luxury high-rise — contract negotiations, budgeting, architects and consultants, construction oversight, stakeholder coordination and project delivery.</p>
+      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">As VP Development and Owner’s Rep in New York, I built a 259-unit luxury high-rise. Contracts, budgets, architects, construction and stakeholder coordination, start to finish.</p>
     </div>
   </section>
 
@@ -346,8 +346,8 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
         <i aria-hidden="true" class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
         <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 12px">Start a conversation</h3>
-        <p style="font-size: 15px; line-height: 24px; color: var(--color-muted); margin: 0 0 24px">Tell me about the project — stage, location, and what is in the way. I will tell you honestly whether I am the right person for it.</p>
+        
+        <p style="font-size: 15px; line-height: 24px; color: var(--color-muted); margin: 0 0 24px">Tell me where the project stands, where it is, and what is stuck. I will tell you plainly if I am the right person to help.</p>
         <div style="display: grid; gap: 12px">
           <div class="field">
             <label for="dr-email-i">Email <span aria-hidden="true" style="color:var(--color-accent-700)">*</span></label>
@@ -358,17 +358,17 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
           <div class="field">
             <label for="dr-note-i">The project <span aria-hidden="true" style="color:var(--color-accent-700)">*</span></label>
             <textarea class="input" id="dr-note-i" placeholder="Location, stage, and what you need." rows="4" required aria-required="true" aria-describedby="dr-note-hint dr-note-error"></textarea>
-            <div id="dr-note-hint" class="field-hint">A few lines is enough — location, stage, what’s stuck.</div>
+            <div id="dr-note-hint" class="field-hint">A few lines is enough, location, stage, what’s stuck.</div>
             <div id="dr-note-error" class="error" role="alert"></div>
           </div>
           <button type="button" class="btn btn-primary btn-block" aria-label="Send project inquiry">Send inquiry</button>
         </div>
-        <p style="font-size: 13px; line-height: 24px; color: var(--color-muted); margin: 12px 0 0">Or write directly — <a href="mailto:david@example.com" aria-label="Email David Reich">david@example.com</a></p>
+        <p style="font-size: 13px; line-height: 24px; color: var(--color-muted); margin: 12px 0 0">Or write directly, <a href="mailto:david@example.com" aria-label="Email David Reich">david@example.com</a></p>
       </div>
     </div>
-    <figure style="margin: 40px 0 0; display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: center; padding: 20px; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-card); max-width: 560px">
-      <div role="img" aria-label="Portrait of David Reich — replace with /images/dr-portrait.jpg" class="image-slot" data-image-id="dr-portrait" style="width:96px; height:96px; aspect-ratio:1; border-radius:50%; background: color-mix(in srgb, var(--color-text) 6%, transparent); border:1.5px dashed color-mix(in srgb, var(--color-text) 14%, transparent); display:flex; align-items:center; justify-content:center; text-align:center; padding:8px; color: var(--color-muted); font-size:10px; line-height:1.3; flex-shrink:0;">Portrait<br><span style="font-size:9px; opacity:0.7">96×96</span></div>
-      <figcaption style="font-size: 13.5px; line-height: 1.5; color: var(--color-muted)"><span style="font-family: var(--font-heading); font-weight:600; color: var(--color-text); font-size:15px">David Reich</span><br>Forty years in the field — now taking select South Florida engagements. The photo stays down here so the work stays up top.</figcaption>
+    <figure style="margin: 48px auto 0; display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: center; padding: 20px; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-card); max-width: 560px">
+      <div role="img" aria-label="Portrait of David Reich, replace with /images/dr-portrait.jpg" class="image-slot" data-image-id="dr-portrait" style="width:96px; height:96px; aspect-ratio:1; border-radius:50%; background: color-mix(in srgb, var(--color-text) 6%, transparent); border:1.5px dashed color-mix(in srgb, var(--color-text) 14%, transparent); display:flex; align-items:center; justify-content:center; text-align:center; padding:8px; color: var(--color-muted); font-size:10px; line-height:1.3; flex-shrink:0;">Portrait<br><span style="font-size:9px; opacity:0.7">96×96</span></div>
+      <figcaption style="font-size: 13.5px; line-height: 1.5; color: var(--color-muted)"><span style="font-family: var(--font-heading); font-weight:600; color: var(--color-text); font-size:15px">David Reich</span><br>Forty years in the field, now taking select South Florida engagements. The photo stays down here so the work stays up top.</figcaption>
     </figure>
   </section>
 
@@ -381,20 +381,20 @@ h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretio
 
 </main>
 <footer style="max-width:1296px; margin:0 auto; padding: 24px clamp(20px,5vw,72px) 56px; border-top:1px solid var(--color-divider); display:flex; flex-wrap:wrap; gap:14px 42px; font-size:13px; color:var(--color-muted)">
-  <span style="font-family:var(--font-heading); font-weight:600; color:var(--color-text); margin-right:auto">© 2026 David Reich — Construction & Development Advisory</span>
+  <span style="font-family:var(--font-heading); font-weight:600; color:var(--color-text); margin-right:auto">© 2026 David Reich, Construction & Development Advisory</span>
   <span>South Florida · Miami · Fort Lauderdale · Palm Beach</span>
 </footer>
 <!-- Content is maintainable: edit this file directly, or replace image-slot divs with <img src="/images/dr-portrait.jpg">. Contact form posts to /api/contact (wire up in Vercel Functions when ready). -->
 <script>
-// Minimal contact handler — replace with real endpoint when you attach a form service
+// Minimal contact handler, replace with real endpoint when you attach a form service
 document.querySelectorAll('.btn.btn-primary.btn-block').forEach(btn => {
   if (btn.textContent.trim() === 'Send') {
     btn.addEventListener('click', () => {
       const email = document.querySelector('#dr-email-i, #dr-email-b, #dr-email')?.value?.trim();
       const note = document.querySelector('#dr-note-i, #dr-note-b, #dr-note')?.value?.trim();
       if (!email || !note) { alert('Add your email and a short note about the project.'); return; }
-      // For now, mailto fallback — wire to Resend / Formspree / Vercel Function later
-      location.href = `mailto:david@example.com?subject=Project inquiry from ${encodeURIComponent(email)}&body=${encodeURIComponent(note + "\n\n— " + email)}`;
+      // For now, mailto fallback, wire to Resend / Formspree / Vercel Function later
+      location.href = `mailto:david@example.com?subject=Project inquiry from ${encodeURIComponent(email)}&body=${encodeURIComponent(note + "\n\n,  " + email)}`;
     });
   }
 });
