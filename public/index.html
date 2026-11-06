@@ -239,7 +239,9 @@ textarea.input{ resize:vertical; min-height:120px }
           <label for="note">The project</label>
           <textarea class="input" id="note" name="note" rows="4" placeholder="Location, stage, and what’s stuck." required></textarea>
         </div>
+        <div aria-hidden="true" style="position:absolute; left:-9999px"><label for="company">Company</label><input id="company" name="company" tabindex="-1" autocomplete="off"></div>
         <button type="submit" class="btn">Send inquiry</button>
+        <p class="hint" style="margin-top:-8px">Or email <a href="mailto:david@davidreich.me">david@davidreich.me</a></p>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -255,10 +257,11 @@ textarea.input{ resize:vertical; min-height:120px }
 </footer>
 
 <script>
-// Contact form. Not yet connected to an inbox: set CONTACT_ENDPOINT (e.g. a Formspree URL) to go live.
-const CONTACT_ENDPOINT = '';
+// Contact form → /api/contact (Vercel function, sends via Resend to david@davidreich.me).
+const CONTACT_ENDPOINT = '/api/contact';
 const form = document.getElementById('contact');
 const status = document.getElementById('form-status');
+const btn = form.querySelector('button[type="submit"]');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   status.className = 'form-status';
@@ -268,11 +271,14 @@ form.addEventListener('submit', async (e) => {
   if (!note) { status.textContent = 'Add a few lines about the project.'; status.classList.add('err'); form.note.focus(); return; }
   if (!CONTACT_ENDPOINT) { status.textContent = 'Thanks. The inquiry form is being connected; please check back shortly.'; return; }
   try {
-    const r = await fetch(CONTACT_ENDPOINT, { method:'POST', headers:{ 'Accept':'application/json', 'Content-Type':'application/json' }, body: JSON.stringify({ email, note }) });
-    if (!r.ok) throw new Error();
+    btn.disabled = true; status.textContent = 'Sending…';
+    const r = await fetch(CONTACT_ENDPOINT, { method:'POST', headers:{ 'Accept':'application/json', 'Content-Type':'application/json' }, body: JSON.stringify({ email, note, company: form.company.value }) });
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(data.error);
     form.reset();
     status.textContent = 'Thanks. I’ll be in touch.';
-  } catch { status.textContent = 'Something went wrong. Please try again.'; status.classList.add('err'); }
+  } catch (err) { status.textContent = err.message || 'Something went wrong. Please email david@davidreich.me.'; status.classList.add('err'); }
+  finally { btn.disabled = false; }
 });
 </script>
 </body>

@@ -2,6 +2,7 @@
   "name": "david-reich-site",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "David Reich — Construction & Development Advisory. Built from Blueprint direction.",
   "scripts": {
     "build": "echo 'static site — no build'",
