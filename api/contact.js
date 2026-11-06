@@ -19,10 +19,13 @@ export default async function handler(req, res) {
   body = body || {};
 
   // Honeypot: real visitors never fill this hidden field. Pretend success for bots.
-  if (body.company) return res.status(200).json({ ok: true });
+  if (body.website || body.company) return res.status(200).json({ ok: true });
 
   const email = String(body.email || '').trim().slice(0, 254);
   const note = String(body.note || '').trim().slice(0, 5000);
+  const clip = (v, n) => String(v || '').replace(/[\r\n]+/g, ' ').trim().slice(0, n);
+  const name = clip(body.name, 120), org = clip(body.org, 160), phone = clip(body.phone, 40), kind = clip(body.kind, 80);
+  if (!name) return res.status(400).json({ error: 'Please add your name.' });
   if (!EMAIL_RE.test(email)) return res.status(400).json({ error: 'Please enter a valid email.' });
   if (note.length < 2) return res.status(400).json({ error: 'Add a few lines about the project.' });
 
@@ -33,9 +36,9 @@ export default async function handler(req, res) {
       from: FROM,
       to: [TO],
       reply_to: email,
-      subject: `Website inquiry from ${email}`,
-      text: `From: ${email}\n\n${note}\n\n— Sent from the contact form on davidreich.me. Reply to this email to answer them directly.`,
-      html: `<p><strong>From:</strong> <a href="mailto:${esc(email)}">${esc(email)}</a></p><p style="white-space:pre-wrap">${esc(note)}</p><hr><p style="color:#666;font-size:13px">Sent from the contact form on davidreich.me. Reply to this email to answer them directly.</p>`,
+      subject: `${kind || 'Website inquiry'}: ${name}${org ? ` (${org})` : ''}`,
+      text: `From: ${name} <${email}>\nCompany: ${org || '—'}\nPhone: ${phone || '—'}\nAbout: ${kind || '—'}\n\n${note}\n\n— Sent from the contact form on davidreich.me. Reply to this email to answer them directly.`,
+      html: `<p><strong>From:</strong> ${esc(name)} &lt;<a href="mailto:${esc(email)}">${esc(email)}</a>&gt;<br><strong>Company:</strong> ${esc(org || '—')}<br><strong>Phone:</strong> ${esc(phone || '—')}<br><strong>About:</strong> ${esc(kind || '—')}</p><p style="white-space:pre-wrap">${esc(note)}</p><hr><p style="color:#666;font-size:13px">Sent from the contact form on davidreich.me. Reply to this email to answer them directly.</p>`,
     }),
   });
 

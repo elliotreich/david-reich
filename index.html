@@ -3,8 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>David Reich, Construction & Development Leadership</title>
-<meta name="description" content="David Reich: owner's representation, senior project oversight, closeout and turnover. Forty years in construction and development. South Florida: Miami, Fort Lauderdale, Palm Beach.">
+<title>David M. Reich | Owner’s Representative &amp; Construction Executive, South Florida</title>
+<meta name="description" content="South Florida owner’s representative and construction executive with 40 years across development, contracting, luxury interiors, project oversight, closeout and turnover.">
+<link rel="canonical" href="https://davidreich.me/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#fbf8f3">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://davidreich.me/">
+<meta property="og:title" content="David M. Reich — Owner’s Representative &amp; Construction Executive">
+<meta property="og:description" content="40 years across development, contracting, ownership and operations. Luxury condo closeout, finishes and owner-side leadership in South Florida.">
+<meta property="og:image" content="https://davidreich.me/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="David M. Reich, Owner’s Representative and Construction Executive, South Florida">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"David M. Reich","url":"https://davidreich.me/","email":"mailto:david@davidreich.me","jobTitle":"Owner’s Representative and Construction Executive","knowsAbout":["Owner’s representation","Construction management","Real estate development","Project closeout and turnover","Luxury interiors and finishes"],"areaServed":["Miami-Dade County, FL","Broward County, FL","Palm Beach County, FL"],"address":{"@type":"PostalAddress","addressLocality":"Fort Lauderdale","addressRegion":"FL","addressCountry":"US"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Baruch College, Zicklin School of Business"},{"@type":"CollegeOrUniversity","name":"Queens College"}],"sameAs":["https://www.linkedin.com/in/david-m-reich"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -57,13 +72,27 @@ a:hover{ color:var(--accent-dark) }
 .hero-body p + p{ margin-top:12px }
 .hero-body p:not(.lede){ color:var(--muted); max-width:52ch }
 
+.cta{ display:flex; flex-wrap:wrap; gap:12px; margin-top:28px }
+.btn-ghost{ display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 22px; border:1px solid var(--field-border); border-radius:6px; color:var(--text); font:500 15px var(--sans); text-decoration:none }
+.btn-ghost:hover{ color:var(--text); background:color-mix(in srgb, var(--text) 5%, transparent) }
+a.btn{ text-decoration:none } a.btn:hover{ color:#fff }
+.proof{ display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:24px 40px; margin:0; padding:36px 0; border-bottom:1px solid var(--rule) }
+.proof div{ min-width:0 }
+.proof dt{ font-family:var(--serif); font-size:clamp(30px, 3.4vw, 40px); line-height:1.05 }
+.proof dd{ margin:8px 0 0; font-size:14px; color:var(--muted); max-width:28ch }
+.throughline{ color:var(--muted); max-width:62ch; margin:-12px 0 28px }
+select.input{ background-image:linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position:calc(100% - 20px) 55%, calc(100% - 14px) 55%; background-size:6px 6px; background-repeat:no-repeat; padding-right:40px }
+.field-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px }
+.opt{ font-weight:400; color:var(--muted) }
+.footer nav{ display:flex; gap:20px }
+
 /* Sections */
 section{ padding:80px 0 0 }
 .section-head{ display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:32px }
 .section-head h2{ font-size:clamp(32px, 4vw, 44px); line-height:1.1 }
 
 /* Services */
-.services{ display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:40px 48px }
+.services{ display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:40px 64px }
 .service{ border-top:1px solid var(--rule-strong); padding-top:20px }
 .service h3{ font-size:24px; line-height:1.2; margin-bottom:10px }
 .service p{ color:var(--muted); font-size:15px }
@@ -110,13 +139,15 @@ textarea.input{ resize:vertical; min-height:120px }
 /* Responsive */
 @media (max-width: 960px){
   .hero{ grid-template-columns:1fr; align-items:start; padding:56px 0 56px }
-  .services{ grid-template-columns:repeat(2, minmax(0, 1fr)) }
+  .proof{ grid-template-columns:repeat(2, minmax(0, 1fr)) }
   .engage{ grid-template-columns:1fr }
 }
 @media (max-width: 640px){
   .nav a:not(.brand):not(.nav-cta){ display:none }
   section{ padding-top:64px }
   .services{ grid-template-columns:1fr; gap:32px }
+  .field-row{ grid-template-columns:1fr }
+  .proof{ gap:20px 24px }
   .project{ grid-template-columns:1fr; padding:24px 0 }
   .project p:last-child{ margin-top:8px }
   .career thead{ display:none }
@@ -133,9 +164,10 @@ textarea.input{ resize:vertical; min-height:120px }
 
 <header class="nav">
   <nav class="wrap" aria-label="Primary">
-    <a class="brand" href="#main">David Reich</a>
+    <a class="brand" href="#main">David M. Reich</a>
     <a href="#services">Services</a>
     <a href="#experience">Experience</a>
+    <a href="https://www.linkedin.com/in/david-m-reich" rel="me">LinkedIn</a>
     <a class="nav-cta" href="#engage">Get in touch</a>
   </nav>
 </header>
@@ -144,16 +176,24 @@ textarea.input{ resize:vertical; min-height:120px }
 
   <div class="hero">
     <div>
-      <p class="eyebrow">New York · South Florida · Since 1985</p>
-      <h1>David Reich</h1>
-      <p class="role">Owner’s representative · Construction &amp; development leadership</p>
+      <p class="eyebrow">South Florida · 40 years in construction &amp; development</p>
+      <h1>David M. Reich</h1>
+      <p class="role">Owner’s representative &amp; construction executive</p>
     </div>
     <div class="hero-body">
       <p class="lede">I help owners and builders get complicated projects across the finish line. Planning, execution, closeout, delivery. I stay with it.</p>
       <p>I have worked every side of the table. Owner’s rep. Ground-up development. General contracting. Buying and repositioning property. Running operations. Hands-on construction management.</p>
-      <p>I am looking for my next senior role with a South Florida owner, developer or owner’s-rep firm, and I take on select owner’s-rep engagements. Either way, you get senior judgment, field knowledge and a direct line to me.</p>
+      <p>I am open to senior roles with South Florida owners, developers and owner’s-rep firms (Director or VP of Construction, Project Executive, Senior Construction Manager) and to select owner’s-rep engagements. Either way, you get senior judgment, field knowledge and a direct line to me.</p>
+      <div class="cta"><a class="btn" href="#engage">Discuss a role or project</a><a class="btn-ghost" href="#experience">See selected projects</a></div>
     </div>
   </div>
+
+  <dl class="proof" aria-label="At a glance">
+    <div><dt>$200M</dt><dd>259-unit Manhattan high-rise, led for the owner</dd></div>
+    <div><dt>40 years</dt><dd>Developer, contractor, owner and operator</dd></div>
+    <div><dt>3</dt><dd>South Florida luxury projects since 2024, through closeout</dd></div>
+    <div><dt>3 counties</dt><dd>Miami-Dade, Broward and Palm Beach; New York before that</dd></div>
+  </dl>
 
   <section id="services" aria-labelledby="services-h">
     <div class="section-head"><h2 id="services-h">How I can help</h2></div>
@@ -164,19 +204,15 @@ textarea.input{ resize:vertical; min-height:120px }
       </div>
       <div class="service">
         <h3>Senior project oversight</h3>
-        <p>When a project needs more leadership, I step in. I review schedules, resolve field conditions, manage contractors, check quality, and keep reporting clear.</p>
+        <p>When a project needs more leadership, I step in. Schedules, field conditions, contractors, quality, procurement and sequencing, with clear reporting to ownership.</p>
       </div>
       <div class="service">
         <h3>Closeout &amp; turnover</h3>
-        <p>The last ten percent is the hardest. I manage punch lists, finish the finishes, coordinate owner and contractor, and push through turnover and TCO.</p>
+        <p>The last ten percent is the hardest. I drive remaining finish work and punch lists, coordinate owner and contractor, and push through turnover and the temporary certificate of occupancy (TCO).</p>
       </div>
       <div class="service">
         <h3>Luxury interiors &amp; complex finishes</h3>
         <p>I specialize in high-end interiors where finishes matter. Stone, tile, marble, custom slabs, mosaics, flooring: the details clients actually see.</p>
-      </div>
-      <div class="service">
-        <h3>Development &amp; construction advisory</h3>
-        <p>I advise owners on how to build it right. Planning, strategy, budget, contractor selection, sequence and procurement.</p>
       </div>
     </div>
   </section>
@@ -185,19 +221,19 @@ textarea.input{ resize:vertical; min-height:120px }
     <div class="section-head"><h2 id="experience-h">Selected experience</h2></div>
     <ul class="projects">
       <li class="project">
-        <div><h3>The Well</h3><p class="place">Bay Harbor Islands, Florida</p></div>
-        <p>I led closeout for a luxury condo and Class A office in Bay Harbor Islands. Units, offices, amenities, finishes, punch lists and TCO coordination.</p>
+        <div><h3>The Well</h3><p class="place">Bay Harbor Islands · Terra · 65 residences and a Class A office building</p></div>
+        <p>I led closeout across the condominium and the office building: units, offices, amenities, finishes, punch lists and TCO coordination.</p>
       </li>
       <li class="project">
-        <div><h3>Forte Condominium</h3><p class="place">West Palm Beach, Florida</p></div>
-        <p>I managed high-end finishes for a luxury high-rise in West Palm Beach. Marble, limestone, porcelain, custom slabs and glass, sequenced and tracked across hundreds of installs.</p>
+        <div><h3>Forté on Flagler</h3><p class="place">West Palm Beach · 25-story, 41-residence tower · closings began 2025</p></div>
+        <p>I managed the high-end finishes. Marble, limestone, porcelain, custom slabs and glass, sequenced and tracked across hundreds of installs.</p>
       </li>
       <li class="project">
-        <div><h3>Banyan Tree Residences Sales Gallery</h3><p class="place">West Palm Beach, Florida</p></div>
+        <div><h3>Banyan Tree Residences Sales Gallery</h3><p class="place">West Palm Beach</p></div>
         <p>I ran tile, stone and wood flooring for the Banyan Tree sales gallery. Crews, schedule, procurement and field coordination across ownership and trades.</p>
       </li>
       <li class="project">
-        <div><h3>$200M luxury residential development</h3><p class="place">New York City</p></div>
+        <div><h3>$200M luxury high-rise</h3><p class="place">Manhattan · 259 units</p></div>
         <p>As VP Development and Project Executive in Manhattan, I delivered a 259-unit luxury high-rise. Contracts, budgets, architects, construction and stakeholder coordination, start to finish.</p>
       </li>
     </ul>
@@ -205,15 +241,16 @@ textarea.input{ resize:vertical; min-height:120px }
 
   <section aria-labelledby="career-h">
     <div class="section-head"><h2 id="career-h">Every side of the table</h2></div>
+    <p class="throughline">Developer, contractor, owner, operator. Each one taught me what the others need, and that is what an owner’s rep is for.</p>
     <table class="career">
       <thead><tr><th scope="col">Role</th><th scope="col">Years</th><th scope="col">What it covered</th></tr></thead>
       <tbody>
         <tr><td>Development executive, New York</td><td>1985–1994</td><td>Pre-development, ground-up construction, sales and closings for residential and mixed-use projects, including a 259-unit Manhattan high-rise.</td></tr>
         <tr><td>Construction company principal</td><td>1994–2002</td><td>Co-owned and then founded contracting firms in New York. High-end interiors, commercial, government and retail work, as GC and as a subcontractor to CMs and developers.</td></tr>
         <tr><td>Real estate owner / operator</td><td>2002–2006</td><td>Acquisition, repositioning, capital improvements, leasing and management of multifamily properties.</td></tr>
-        <tr><td>Operating executive</td><td>2007–2024</td><td>Seventeen years managing production, procurement, supply chain, vendors, budgeting and business operations.</td></tr>
+        <tr><td>Chief operating officer</td><td>2007–2024</td><td>Seventeen years running purchasing, vendors, production schedules, distribution and budgets for a made-to-order consumer-products company. The same discipline drives procurement and long-lead tracking on a job.</td></tr>
         <tr><td>Interiors &amp; closeout, South Florida</td><td>2024–2026</td><td>Finishes, trade coordination, punch lists and turnover on luxury condo, mixed-use and sales-gallery projects.</td></tr>
-        <tr><td>Independent owner’s rep &amp; advisor</td><td>2026–Present</td><td>Owner’s representation, project oversight and closeout for South Florida owners and developers.</td></tr>
+        <tr><td>Owner’s rep &amp; advisory</td><td>2026–Present</td><td>Select owner’s-rep engagements in South Florida while I look for my next senior in-house role.</td></tr>
       </tbody>
     </table>
   </section>
@@ -233,18 +270,43 @@ textarea.input{ resize:vertical; min-height:120px }
         </ul>
       </div>
       <form class="form" id="contact" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input class="input" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="org">Company <span class="opt">(optional)</span></label>
+            <input class="input" id="org" name="org" autocomplete="organization">
+          </div>
+        </div>
         <div class="field">
           <label for="email">Email</label>
           <input class="input" id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required aria-describedby="email-hint">
           <p id="email-hint" class="hint">Only used to reply.</p>
         </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="phone">Phone <span class="opt">(optional)</span></label>
+            <input class="input" id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="kind">What is this about?</label>
+            <select class="input" id="kind" name="kind">
+              <option>A senior role</option>
+              <option>An owner’s-rep engagement</option>
+              <option>Closeout or a project in trouble</option>
+              <option>Something else</option>
+            </select>
+          </div>
+        </div>
         <div class="field">
           <label for="note">The role or project</label>
-          <textarea class="input" id="note" name="note" rows="4" placeholder="The role, or the project: location, stage, what’s stuck." required></textarea>
+          <textarea class="input" id="note" name="note" rows="4" placeholder="The role, or the project: location, stage, what’s stuck, and how soon." required></textarea>
         </div>
-        <div aria-hidden="true" style="position:absolute; left:-9999px"><label for="company">Company</label><input id="company" name="company" tabindex="-1" autocomplete="off"></div>
+        <div aria-hidden="true" style="position:absolute; left:-9999px"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
         <button type="submit" class="btn">Send inquiry</button>
-        <p class="hint" style="margin-top:-8px">Or email <a href="mailto:david@davidreich.me">david@davidreich.me</a></p>
+        <p class="hint" style="margin-top:-8px">I read and answer every message myself. Or email <a href="mailto:david@davidreich.me">david@davidreich.me</a>.</p>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -254,9 +316,9 @@ textarea.input{ resize:vertical; min-height:120px }
 
 <footer class="footer">
   <div class="wrap">
-    <span>© 2026 David Reich</span>
+    <span>© 2026 David M. Reich</span>
     <span>Miami · Fort Lauderdale · Palm Beach</span>
-    <a href="https://www.linkedin.com/in/david-m-reich" rel="me">LinkedIn</a>
+    <nav aria-label="Footer"><a href="#services">Services</a><a href="#experience">Experience</a><a href="#engage">Contact</a><a href="https://www.linkedin.com/in/david-m-reich" rel="me">LinkedIn</a></nav>
   </div>
 </footer>
 
@@ -271,12 +333,14 @@ form.addEventListener('submit', async (e) => {
   status.className = 'form-status';
   const email = form.email.value.trim();
   const note = form.note.value.trim();
+  const name = form.name.value.trim();
+  if (!name) { status.textContent = 'Please add your name.'; status.classList.add('err'); form.name.focus(); return; }
   if (!form.email.checkValidity() || !email) { status.textContent = 'Please enter a valid email.'; status.classList.add('err'); form.email.focus(); return; }
-  if (!note) { status.textContent = 'Add a few lines about the project.'; status.classList.add('err'); form.note.focus(); return; }
+  if (!note) { status.textContent = 'Add a few lines about the role or project.'; status.classList.add('err'); form.note.focus(); return; }
   if (!CONTACT_ENDPOINT) { status.textContent = 'Thanks. The inquiry form is being connected; please check back shortly.'; return; }
   try {
     btn.disabled = true; status.textContent = 'Sending…';
-    const r = await fetch(CONTACT_ENDPOINT, { method:'POST', headers:{ 'Accept':'application/json', 'Content-Type':'application/json' }, body: JSON.stringify({ email, note, company: form.company.value }) });
+    const r = await fetch(CONTACT_ENDPOINT, { method:'POST', headers:{ 'Accept':'application/json', 'Content-Type':'application/json' }, body: JSON.stringify({ name, email, note, org: form.org.value.trim(), phone: form.phone.value.trim(), kind: form.kind.value, website: form.website.value }) });
     const data = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(data.error);
     form.reset();
