@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#fbf8f3">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://davidreich.me/">
-<meta property="og:title" content="David M. Reich — Owner’s Representative &amp; Construction Executive">
+<meta property="og:title" content="David M. Reich | Owner’s Representative &amp; Construction Executive">
 <meta property="og:description" content="40 years across development, contracting, ownership and operations. Luxury condo closeout, finishes and owner-side leadership in South Florida.">
 <meta property="og:image" content="https://davidreich.me/og.png">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* Design tokens. Edit these to restyle the whole site. */
 :root{
@@ -56,18 +56,17 @@ a:hover{ color:var(--accent-dark) }
 .wrap{ max-width:var(--max); margin:0 auto; padding:0 var(--pad) }
 
 /* Nav */
-.nav{ position:sticky; top:0; z-index:10; background:color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--rule) }
+.nav{ position:sticky; top:0; z-index:10; background:var(--bg); border-bottom:1px solid var(--rule) }
 .nav .wrap{ display:flex; align-items:center; gap:4px; min-height:60px }
 .brand{ font-family:var(--serif); font-size:22px; color:var(--text); text-decoration:none; margin-right:auto }
-.nav a:not(.brand){ font-size:14px; color:var(--muted); text-decoration:none; padding:10px 12px; border-radius:6px }
+.nav a:not(.brand){ font-size:15px; color:var(--muted); text-decoration:none; padding:10px 12px; border-radius:6px }
 .nav a:not(.brand):hover{ color:var(--text); background:color-mix(in srgb, var(--text) 5%, transparent) }
 .nav a.nav-cta{ color:var(--text); font-weight:500 }
 
 /* Hero */
 .hero{ display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1.1fr); gap:32px 64px; padding:88px 0 80px; align-items:end; border-bottom:1px solid var(--rule) }
-.eyebrow{ font-size:13px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin-bottom:20px }
-.hero h1{ font-size:clamp(56px, 9vw, 104px); line-height:0.95; letter-spacing:-0.02em }
-.hero .role{ font-family:var(--serif); font-style:italic; font-size:clamp(22px, 2.6vw, 28px); line-height:1.25; color:var(--muted); margin-top:16px }
+.hero h1{ font-size:clamp(48px, 7vw, 80px); line-height:1; letter-spacing:-0.01em }
+.hero .role{ font-size:clamp(17px, 1.8vw, 19px); line-height:1.4; color:var(--muted); margin-top:16px; max-width:30ch }
 .lede{ font-size:clamp(19px, 1.9vw, 22px); line-height:1.5; margin-bottom:20px; max-width:34ch }
 .hero-body p + p{ margin-top:12px }
 .hero-body p:not(.lede){ color:var(--muted); max-width:52ch }
@@ -76,10 +75,10 @@ a:hover{ color:var(--accent-dark) }
 .btn-ghost{ display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 22px; border:1px solid var(--field-border); border-radius:6px; color:var(--text); font:500 15px var(--sans); text-decoration:none }
 .btn-ghost:hover{ color:var(--text); background:color-mix(in srgb, var(--text) 5%, transparent) }
 a.btn{ text-decoration:none } a.btn:hover{ color:#fff }
-.proof{ display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:24px 40px; margin:0; padding:36px 0; border-bottom:1px solid var(--rule) }
+.proof{ display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:24px 40px; margin:0; padding:32px 0; border-bottom:1px solid var(--rule) }
 .proof div{ min-width:0 }
-.proof dt{ font-family:var(--serif); font-size:clamp(30px, 3.4vw, 40px); line-height:1.05 }
-.proof dd{ margin:8px 0 0; font-size:14px; color:var(--muted); max-width:28ch }
+.proof dt{ font-family:var(--serif); font-size:clamp(26px, 2.8vw, 32px); line-height:1.1 }
+.proof dd{ margin:6px 0 0; font-size:15px; color:var(--muted); max-width:28ch }
 .throughline{ color:var(--muted); max-width:62ch; margin:-12px 0 28px }
 select.input{ background-image:linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position:calc(100% - 20px) 55%, calc(100% - 14px) 55%; background-size:6px 6px; background-repeat:no-repeat; padding-right:40px }
 .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px }
@@ -95,18 +94,18 @@ section{ padding:80px 0 0 }
 .services{ display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:40px 64px }
 .service{ border-top:1px solid var(--rule-strong); padding-top:20px }
 .service h3{ font-size:24px; line-height:1.2; margin-bottom:10px }
-.service p{ color:var(--muted); font-size:15px }
+.service p{ color:var(--muted); font-size:16px }
 
 /* Experience */
 .projects{ list-style:none; margin:0; padding:0; border-bottom:1px solid var(--rule) }
 .project{ display:grid; grid-template-columns:minmax(0, 5fr) minmax(0, 7fr); gap:8px 48px; padding:28px 0; border-top:1px solid var(--rule) }
 .project h3{ font-size:28px; line-height:1.15 }
-.project .place{ font-size:14px; color:var(--muted); margin-top:6px }
-.project p:last-child{ color:var(--muted); font-size:15px; max-width:60ch }
+.project .place{ font-size:15px; color:var(--muted); margin-top:6px }
+.project p:last-child{ color:var(--muted); font-size:16px; max-width:60ch }
 
 /* Career */
-.career{ width:100%; border-collapse:collapse; font-size:15px }
-.career th{ text-align:left; font-size:13px; font-weight:500; color:var(--muted); padding:0 24px 12px 0; border-bottom:1px solid var(--rule-strong) }
+.career{ width:100%; border-collapse:collapse; font-size:16px }
+.career th{ text-align:left; font-size:14px; font-weight:500; color:var(--muted); padding:0 24px 12px 0; border-bottom:1px solid var(--rule-strong) }
 .career td{ padding:18px 24px 18px 0; border-bottom:1px solid var(--rule); vertical-align:baseline }
 .career td:first-child{ font-family:var(--serif); font-size:21px; line-height:1.25; width:32% }
 .career td:nth-child(2){ color:var(--muted); white-space:nowrap; font-variant-numeric:tabular-nums; width:14% }
@@ -115,8 +114,6 @@ section{ padding:80px 0 0 }
 /* Engage */
 .engage{ display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); gap:48px 72px; align-items:start }
 .engage-intro p{ color:var(--muted); max-width:44ch }
-.engage-list{ list-style:none; margin:28px 0 0; padding:0; border-top:1px solid var(--rule) }
-.engage-list li{ padding:12px 0; border-bottom:1px solid var(--rule); font-size:15px }
 
 .form{ display:grid; gap:20px; padding:32px; background:#fff; border:1px solid var(--rule); border-radius:8px }
 .field label{ display:block; font-size:14px; font-weight:500; margin-bottom:6px }
@@ -124,7 +121,7 @@ section{ padding:80px 0 0 }
 .input::placeholder{ color:#7a6e62; opacity:1 }
 .input:focus{ outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent) }
 textarea.input{ resize:vertical; min-height:120px }
-.hint{ font-size:13px; color:var(--muted); margin-top:6px }
+.hint{ font-size:14px; color:var(--muted); margin-top:6px }
 .btn{ display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 24px; border:0; border-radius:6px; background:var(--text); color:#fff; font:500 15px var(--sans); cursor:pointer }
 .btn:hover{ background:#000 }
 .form-status{ font-size:14px; color:var(--muted); min-height:1.4em }
@@ -132,14 +129,14 @@ textarea.input{ resize:vertical; min-height:120px }
 
 /* Footer */
 .footer{ margin-top:96px; border-top:1px solid var(--rule) }
-.footer .wrap{ display:flex; flex-wrap:wrap; gap:8px 32px; padding-top:28px; padding-bottom:48px; font-size:14px; color:var(--muted) }
+.footer .wrap{ display:flex; flex-wrap:wrap; gap:8px 32px; padding-top:28px; padding-bottom:48px; font-size:15px; color:var(--muted) }
 .footer .wrap span:first-child{ margin-right:auto; color:var(--text) }
 .footer a{ color:var(--accent-dark); text-underline-offset:3px }
 
 /* Responsive */
 @media (max-width: 960px){
   .hero{ grid-template-columns:1fr; align-items:start; padding:56px 0 56px }
-  .proof{ grid-template-columns:repeat(2, minmax(0, 1fr)) }
+  .proof{ grid-template-columns:1fr }
   .engage{ grid-template-columns:1fr }
 }
 @media (max-width: 640px){
@@ -147,14 +144,14 @@ textarea.input{ resize:vertical; min-height:120px }
   section{ padding-top:64px }
   .services{ grid-template-columns:1fr; gap:32px }
   .field-row{ grid-template-columns:1fr }
-  .proof{ gap:20px 24px }
+  .proof{ gap:16px }
   .project{ grid-template-columns:1fr; padding:24px 0 }
   .project p:last-child{ margin-top:8px }
   .career thead{ display:none }
   .career, .career tbody, .career tr, .career td{ display:block; width:auto !important }
   .career tr{ padding:16px 0; border-bottom:1px solid var(--rule) }
   .career td{ padding:0; border:0 }
-  .career td:nth-child(2){ font-size:14px; margin:2px 0 6px }
+  .career td:nth-child(2){ font-size:15px; margin:2px 0 6px }
   .form{ padding:24px 20px }
 }
 </style>
@@ -176,14 +173,13 @@ textarea.input{ resize:vertical; min-height:120px }
 
   <div class="hero">
     <div>
-      <p class="eyebrow">South Florida · 40 years in construction &amp; development</p>
       <h1>David M. Reich</h1>
-      <p class="role">Owner’s representative &amp; construction executive</p>
+      <p class="role">Owner’s representative and construction executive in South Florida</p>
     </div>
     <div class="hero-body">
-      <p class="lede">I help owners and builders get complicated projects across the finish line. Planning, execution, closeout, delivery. I stay with it.</p>
-      <p>I have worked every side of the table. Owner’s rep. Ground-up development. General contracting. Buying and repositioning property. Running operations. Hands-on construction management.</p>
-      <p>I am open to senior roles with South Florida owners, developers and owner’s-rep firms (Director or VP of Construction, Project Executive, Senior Construction Manager) and to select owner’s-rep engagements. Either way, you get senior judgment, field knowledge and a direct line to me.</p>
+      <p class="lede">I help owners and builders get complicated projects across the finish line, from planning through closeout and delivery. I stay with it.</p>
+      <p>I have worked as an owner’s rep, a ground-up developer, a general contractor, a property buyer and operator, and a hands-on construction manager.</p>
+      <p>I am open to senior roles with South Florida owners, developers and owner’s-rep firms (Director or VP of Construction, Project Executive, Senior Construction Manager) and to select owner’s-rep engagements. Either way, you deal with me directly.</p>
       <div class="cta"><a class="btn" href="#engage">Discuss a role or project</a><a class="btn-ghost" href="#experience">See selected projects</a></div>
     </div>
   </div>
@@ -192,7 +188,6 @@ textarea.input{ resize:vertical; min-height:120px }
     <div><dt>$200M</dt><dd>259-unit Manhattan high-rise, led for the owner</dd></div>
     <div><dt>40 years</dt><dd>Developer, contractor, owner and operator</dd></div>
     <div><dt>3</dt><dd>South Florida luxury projects since 2024, through closeout</dd></div>
-    <div><dt>3 counties</dt><dd>Miami-Dade, Broward and Palm Beach; New York before that</dd></div>
   </dl>
 
   <section id="services" aria-labelledby="services-h">
@@ -204,7 +199,7 @@ textarea.input{ resize:vertical; min-height:120px }
       </div>
       <div class="service">
         <h3>Senior project oversight</h3>
-        <p>When a project needs more leadership, I step in. Schedules, field conditions, contractors, quality, procurement and sequencing, with clear reporting to ownership.</p>
+        <p>When a project needs more leadership, I step in. I run schedules, field conditions, contractors, quality, procurement and sequencing, and I report clearly to ownership.</p>
       </div>
       <div class="service">
         <h3>Closeout &amp; turnover</h3>
@@ -212,7 +207,7 @@ textarea.input{ resize:vertical; min-height:120px }
       </div>
       <div class="service">
         <h3>Luxury interiors &amp; complex finishes</h3>
-        <p>I specialize in high-end interiors where finishes matter. Stone, tile, marble, custom slabs, mosaics, flooring: the details clients actually see.</p>
+        <p>I specialize in high-end interiors: stone, tile, marble, custom slabs, mosaics and flooring. These are the details clients see.</p>
       </div>
     </div>
   </section>
@@ -226,15 +221,15 @@ textarea.input{ resize:vertical; min-height:120px }
       </li>
       <li class="project">
         <div><h3>Forté on Flagler</h3><p class="place">West Palm Beach · 25-story, 41-residence tower · closings began 2025</p></div>
-        <p>I managed the high-end finishes. Marble, limestone, porcelain, custom slabs and glass, sequenced and tracked across hundreds of installs.</p>
+        <p>I managed the high-end finishes. I sequenced and tracked marble, limestone, porcelain, custom slabs and glass across hundreds of installs.</p>
       </li>
       <li class="project">
         <div><h3>Banyan Tree Residences Sales Gallery</h3><p class="place">West Palm Beach</p></div>
-        <p>I ran tile, stone and wood flooring for the Banyan Tree sales gallery. Crews, schedule, procurement and field coordination across ownership and trades.</p>
+        <p>I ran tile, stone and wood flooring for the Banyan Tree sales gallery. I coordinated crews, schedule, procurement and the field between ownership and the trades.</p>
       </li>
       <li class="project">
         <div><h3>$200M luxury high-rise</h3><p class="place">Manhattan · 259 units</p></div>
-        <p>As VP Development and Project Executive in Manhattan, I delivered a 259-unit luxury high-rise. Contracts, budgets, architects, construction and stakeholder coordination, start to finish.</p>
+        <p>As VP Development and Project Executive in Manhattan, I delivered a 259-unit luxury high-rise. I handled contracts, budgets, architects, construction and stakeholder coordination, start to finish.</p>
       </li>
     </ul>
   </section>
@@ -259,15 +254,7 @@ textarea.input{ resize:vertical; min-height:120px }
     <div class="engage">
       <div class="engage-intro">
         <div class="section-head" style="margin-bottom:16px"><h2 id="engage-h">Open to roles and engagements</h2></div>
-        <p>Hiring for a senior construction or development role, or have a project that needs an owner’s rep? Tell me about it. I will tell you plainly if I am the right person.</p>
-        <ul class="engage-list">
-          <li>Senior roles: Director or VP of Construction, Project Executive, Senior Construction Manager</li>
-          <li>Owner’s representative roles and assignments</li>
-          <li>Condo capital, restoration and turnover programs</li>
-          <li>Senior project oversight</li>
-          <li>Project closeout and completion</li>
-          <li>Luxury residential and complex-interior projects</li>
-        </ul>
+        <p>Hiring for a senior construction or development role, or have a project that needs an owner’s rep? Tell me about it. That includes condo capital, restoration and turnover programs, closeout, and luxury residential or complex-interior work. I will tell you plainly if I am the right person.</p>
       </div>
       <form class="form" id="contact" novalidate>
         <div class="field-row">
