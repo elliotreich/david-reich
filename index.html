@@ -16,6 +16,7 @@
   --muted: #5f554b;      /* ~6:1 on bg */
   --rule: #e4dbcf;
   --rule-strong: #cfc2b0;
+  --field-border: #958877; /* 3.5:1 on white, meets WCAG 1.4.11 */
   --accent: #9f4d0e;     /* ~4.8:1 on bg */
   --accent-dark: #7a380a;
   --serif: "Instrument Serif", Georgia, serif;
@@ -90,8 +91,8 @@ section{ padding:80px 0 0 }
 
 .form{ display:grid; gap:20px; padding:32px; background:#fff; border:1px solid var(--rule); border-radius:8px }
 .field label{ display:block; font-size:14px; font-weight:500; margin-bottom:6px }
-.input{ width:100%; padding:12px 14px; border:1px solid var(--rule-strong); border-radius:6px; font:16px/1.4 var(--sans); color:var(--text); background:#fff; -webkit-appearance:none }
-.input::placeholder{ color:#998e83 }
+.input{ width:100%; padding:12px 14px; border:1px solid var(--field-border); border-radius:6px; font:16px/1.4 var(--sans); color:var(--text); background:#fff; -webkit-appearance:none }
+.input::placeholder{ color:#7a6e62; opacity:1 }
 .input:focus{ outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent) }
 textarea.input{ resize:vertical; min-height:120px }
 .hint{ font-size:13px; color:var(--muted); margin-top:6px }
