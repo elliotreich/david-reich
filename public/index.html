@@ -4,374 +4,274 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>David Reich, Construction & Development Advisory</title>
-<meta name="description" content="David Reich, Owner's Representation, Senior Project Oversight, Closeout & Turnover. 40 years, South Florida: Miami, Fort Lauderdale, Palm Beach.">
+<meta name="description" content="David Reich: owner's representation, senior project oversight, closeout and turnover. Forty years in construction and development. South Florida: Miami, Fort Lauderdale, Palm Beach.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ── Design system, maintain long-term by editing these tokens ── */
+/* Design tokens. Edit these to restyle the whole site. */
 :root{
-  --color-bg: #fdfbf7;
-  --color-surface: #ffffff;
-  --color-text: #1e1c1a;
-  --color-muted: #6b5e52; /* 4.6:1 on #fdfbf7, passes AA for 13-15px */
-  --color-faint: #8a7f74; /* 3.2:1 for large/caps, intentional */
-  --color-divider: #e9e0d4;
-  --color-divider-strong: #d0c4b2;
-  --color-accent-700: #9f4d0e; /* 4.8:1 on bg, was #b85c1a at 3.9:1 */
-  --color-accent-800: #7a380a;
-  --color-focus: #9f4d0e;
-  --font-heading: "Instrument Serif", Georgia, serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  --max: 1296px;
-  --pad: clamp(16px, 4vw, 72px);
-  --radius-card: 12px;
+  --bg: #fbf8f3;
+  --text: #1e1c1a;
+  --muted: #5f554b;      /* ~6:1 on bg */
+  --rule: #e4dbcf;
+  --rule-strong: #cfc2b0;
+  --accent: #9f4d0e;     /* ~4.8:1 on bg */
+  --accent-dark: #7a380a;
+  --serif: "Instrument Serif", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+  --max: 1120px;
+  --pad: clamp(20px, 5vw, 56px);
 }
 *{ box-sizing:border-box }
-html{ scroll-behavior:smooth; scrollbar-gutter:stable }
-@media (prefers-reduced-motion: reduce){
-  html{ scroll-behavior:auto }
-  *, *::before, *::after{ animation-duration:0.01ms !important; transition-duration:0.01ms !important; scroll-behavior:auto !important }
-}
-body{ margin:0; background:var(--color-bg); color:var(--color-text); font-family:var(--font-body); text-wrap:pretty; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; font-variant-ligatures:common-ligatures; }
-a{ color:var(--color-accent-700); text-underline-offset:3px; text-decoration-thickness:1.2px }
-a:hover{ color:var(--color-accent-800) }
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{ outline:2px solid var(--color-focus); outline-offset:3px; border-radius:2px }
-::selection{ background: color-mix(in srgb, var(--color-accent-700) 18%, transparent) }
+html{ scroll-behavior:smooth; scroll-padding-top:72px }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto } }
+body{ margin:0; background:var(--bg); color:var(--text); font:16px/1.6 var(--sans); -webkit-font-smoothing:antialiased; text-wrap:pretty }
+h1, h2, h3{ font-family:var(--serif); font-weight:400; margin:0; text-wrap:balance }
+p{ margin:0 }
+a{ color:var(--accent); text-underline-offset:3px; text-decoration-thickness:1px }
+a:hover{ color:var(--accent-dark) }
+:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px }
+::selection{ background:color-mix(in srgb, var(--accent) 18%, transparent) }
 
-/* Skip link, first Tab stop for keyboard/screen readers */
-.skip{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden }
-.skip:focus{ left:12px; top:12px; width:auto; height:auto; padding:10px 14px; background:var(--color-text); color:#fff; border-radius:999px; font-size:13px; font-weight:600; letter-spacing:0.04em; z-index:100; text-decoration:none }
+.skip{ position:absolute; left:-9999px }
+.skip:focus{ left:12px; top:12px; padding:10px 14px; background:var(--text); color:#fff; border-radius:6px; font-size:14px; z-index:100; text-decoration:none }
 
-/* Nav, sticky with solid fallback for no backdrop-filter */
-.nav{ position:sticky; top:0; z-index:20; background: color-mix(in srgb, var(--color-bg) 92%, white); border-bottom:1px solid var(--color-divider); }
-@supports (backdrop-filter: blur(8px)){
-  .nav{ backdrop-filter:saturate(1.08) blur(10px); background: color-mix(in srgb, var(--color-bg) 86%, transparent); }
-}
-.nav-inner{ max-width:var(--max); margin:0 auto; padding:12px var(--pad); display:flex; align-items:center; gap:14px; flex-wrap:wrap }
-.nav-brand{ letter-spacing:0.06em; text-transform:uppercase; font-weight:700; font-size:13px; margin-right:auto; text-decoration:none; color:inherit }
-.nav a:not(.btn){ font-size:12.5px; letter-spacing:0.09em; text-transform:uppercase; text-decoration:none; color:inherit; opacity:0.78; font-weight:550; padding:10px 10px; border-radius:8px; min-height:44px; display:inline-flex; align-items:center }
-.nav a:not(.btn):hover{ opacity:1; background: color-mix(in srgb, var(--color-text) 6%, transparent) }
-.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 20px; border-radius:999px; font-size:12.5px; font-weight:650; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; border:1.5px solid var(--color-text); line-height:1; min-height:44px; min-width:44px; cursor:pointer }
-.btn-primary{ background:var(--color-text); color:#fff; border-color:var(--color-text) }
-.btn-primary:hover{ background:#0f0f10; color:#fff }
-.btn-primary:active{ transform:translateY(0.5px) }
-.btn-block{ width:100% }
-.table{ width:100%; border-collapse:collapse }
-.corner{ position:absolute; width:14px; height:14px; border:1px solid #9a8f85; pointer-events:none }
-.corner.tl{ top:-7px; left:-7px; border-right:0; border-bottom:0 }
-.corner.tr{ top:-7px; right:-7px; border-left:0; border-bottom:0 }
-.corner.bl{ bottom:-7px; left:-7px; border-right:0; border-top:0 }
-.corner.br{ bottom:-7px; right:-7px; border-left:0; border-top:0 }
-.input{ width:100%; padding:13px 14px; border:1.5px solid var(--color-divider-strong); border-radius:12px; font:16px var(--font-body); background:#fff; line-height:1.4; -webkit-appearance:none }
-.input::placeholder{ color: var(--color-faint) }
-.input:focus{ outline:2px solid var(--color-accent-700); outline-offset:2px; border-color:var(--color-accent-700) }
-.input[aria-invalid="true"]{ border-color:#b42318; background:#fef3f2 }
-.field label{ display:block; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color: var(--color-muted); margin-bottom:8px; font-weight:650 }
-.field-hint{ font-size:12.5px; line-height:1.5; color:var(--color-muted); margin-top:8px }
-.error{ font-size:12.5px; line-height:1.4; color:#b42318; margin-top:8px; display:none }
-.error.on{ display:block }
-.image-slot{ width:100%; aspect-ratio:4/5; background: color-mix(in srgb, var(--color-text) 5%, transparent); border:1.5px dashed color-mix(in srgb, var(--color-text) 14%, transparent); border-radius:var(--radius-card); display:flex; align-items:center; justify-content:center; text-align:center; padding:24px; color: var(--color-muted); font-size:13px; line-height:1.5; }
+.wrap{ max-width:var(--max); margin:0 auto; padding:0 var(--pad) }
 
-/* Mobile-first refinements, kerning + rhythm */
-h1, h2, h3{ text-wrap:balance; font-variant-ligatures:common-ligatures discretionary-ligatures; font-kerning:normal; }
-@media (max-width: 1100px){
-  div[style*="grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr)"]{ grid-template-columns:1fr !important; }
-}
-@media (max-width: 900px){
-  .nav-inner{ gap:8px; padding:10px var(--pad) }
-  .nav a:not(.btn):not(.nav-brand){ display:none } /* keep brand + CTA only, CTA stays tappable */
-  .nav .btn{ padding:11px 16px; font-size:12px }
-}
+/* Nav */
+.nav{ position:sticky; top:0; z-index:10; background:color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--rule) }
+.nav .wrap{ display:flex; align-items:center; gap:4px; min-height:60px }
+.brand{ font-family:var(--serif); font-size:22px; color:var(--text); text-decoration:none; margin-right:auto }
+.nav a:not(.brand){ font-size:14px; color:var(--muted); text-decoration:none; padding:10px 12px; border-radius:6px }
+.nav a:not(.brand):hover{ color:var(--text); background:color-mix(in srgb, var(--text) 5%, transparent) }
+.nav a.nav-cta{ color:var(--text); font-weight:500 }
 
-/* Touch target enforcement */
-@media (pointer: coarse){
-  .nav a, .btn{ min-height:44px }
-}
-</style>
+/* Hero */
+.hero{ display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1.1fr); gap:32px 64px; padding:88px 0 80px; align-items:end; border-bottom:1px solid var(--rule) }
+.eyebrow{ font-size:13px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin-bottom:20px }
+.hero h1{ font-size:clamp(56px, 9vw, 104px); line-height:0.95; letter-spacing:-0.02em }
+.hero .role{ font-family:var(--serif); font-style:italic; font-size:clamp(22px, 2.6vw, 28px); line-height:1.25; color:var(--muted); margin-top:16px }
+.lede{ font-size:clamp(19px, 1.9vw, 22px); line-height:1.5; margin-bottom:20px; max-width:34ch }
+.hero-body p + p{ margin-top:12px }
+.hero-body p:not(.lede){ color:var(--muted); max-width:52ch }
 
-<style>
-/* Mobile-first overrides, injected by polish pass */
-@media (max-width: 900px){
-  /* Hero: stack, image below text, reduce vertical rhythm */
-  section[style*="grid-template-columns: minmax(0, 7fr)"]{ grid-template-columns:1fr !important; gap:20px !important; padding:36px 0 40px !important; }
-  section[style*="grid-template-columns: minmax(0, 5fr)"]{ grid-template-columns:1fr !important; gap:20px !important; padding:0 0 40px !important; }
-  /* Capability + timeline tables: allow horizontal scroll without layout break */
-  .table{ display:block; overflow-x:auto; -webkit-overflow-scrolling:touch }
-  .table thead{ white-space:nowrap }
-  /* Services + experience grids tighten */
-  div[style*="grid-template-columns: repeat(auto-fit"]{ gap:18px !important }
-  /* Experience 3-col → mobile: num+title side-by-side, description full-width below */
-  div[style*="grid-template-columns: 48px minmax(0, 4fr)"]{
-    grid-template-columns: 40px 1fr !important;
-    gap: 12px 14px !important;
-    padding: 20px 0 !important;
-    align-items: start !important;
-  }
-  div[style*="grid-template-columns: 48px minmax(0, 4fr)"] > p:last-child{
-    grid-column: 1 / -1 !important;
-    margin-top: 4px !important;
-    max-width: none !important;
-  }
-  /* Engage: stack form below list */
-  div[style*="grid-template-columns: minmax(0, 6fr)"]{ grid-template-columns:1fr !important; gap:24px !important }
-  /* Second split with project image */
-  section[style*="grid-template-columns: minmax(0, 5fr) minmax(0, 7fr)"]{ gap:16px !important }
+/* Sections */
+section{ padding:80px 0 0 }
+.section-head{ display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:32px }
+.section-head h2{ font-size:clamp(32px, 4vw, 44px); line-height:1.1 }
+
+/* Services */
+.services{ display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:40px 48px }
+.service{ border-top:1px solid var(--rule-strong); padding-top:20px }
+.service h3{ font-size:24px; line-height:1.2; margin-bottom:10px }
+.service p{ color:var(--muted); font-size:15px }
+
+/* Experience */
+.projects{ list-style:none; margin:0; padding:0; border-bottom:1px solid var(--rule) }
+.project{ display:grid; grid-template-columns:minmax(0, 5fr) minmax(0, 7fr); gap:8px 48px; padding:28px 0; border-top:1px solid var(--rule) }
+.project h3{ font-size:28px; line-height:1.15 }
+.project .place{ font-size:14px; color:var(--muted); margin-top:6px }
+.project p:last-child{ color:var(--muted); font-size:15px; max-width:60ch }
+
+/* Career */
+.career{ width:100%; border-collapse:collapse; font-size:15px }
+.career th{ text-align:left; font-size:13px; font-weight:500; color:var(--muted); padding:0 24px 12px 0; border-bottom:1px solid var(--rule-strong) }
+.career td{ padding:18px 24px 18px 0; border-bottom:1px solid var(--rule); vertical-align:baseline }
+.career td:first-child{ font-family:var(--serif); font-size:21px; line-height:1.25; width:32% }
+.career td:nth-child(2){ color:var(--muted); white-space:nowrap; font-variant-numeric:tabular-nums; width:14% }
+.career td:last-child{ color:var(--muted); padding-right:0 }
+
+/* Engage */
+.engage{ display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); gap:48px 72px; align-items:start }
+.engage-intro p{ color:var(--muted); max-width:44ch }
+.engage-list{ list-style:none; margin:28px 0 0; padding:0; border-top:1px solid var(--rule) }
+.engage-list li{ padding:12px 0; border-bottom:1px solid var(--rule); font-size:15px }
+
+.form{ display:grid; gap:20px; padding:32px; background:#fff; border:1px solid var(--rule); border-radius:8px }
+.field label{ display:block; font-size:14px; font-weight:500; margin-bottom:6px }
+.input{ width:100%; padding:12px 14px; border:1px solid var(--rule-strong); border-radius:6px; font:16px/1.4 var(--sans); color:var(--text); background:#fff; -webkit-appearance:none }
+.input::placeholder{ color:#998e83 }
+.input:focus{ outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent) }
+textarea.input{ resize:vertical; min-height:120px }
+.hint{ font-size:13px; color:var(--muted); margin-top:6px }
+.btn{ display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 24px; border:0; border-radius:6px; background:var(--text); color:#fff; font:500 15px var(--sans); cursor:pointer }
+.btn:hover{ background:#000 }
+.form-status{ font-size:14px; color:var(--muted); min-height:1.4em }
+.form-status.err{ color:#b42318 }
+
+/* Footer */
+.footer{ margin-top:96px; border-top:1px solid var(--rule) }
+.footer .wrap{ display:flex; flex-wrap:wrap; gap:8px 32px; padding-top:28px; padding-bottom:48px; font-size:14px; color:var(--muted) }
+.footer .wrap span:first-child{ margin-right:auto; color:var(--text) }
+
+/* Responsive */
+@media (max-width: 960px){
+  .hero{ grid-template-columns:1fr; align-items:start; padding:56px 0 56px }
+  .services{ grid-template-columns:repeat(2, minmax(0, 1fr)) }
+  .engage{ grid-template-columns:1fr }
 }
 @media (max-width: 640px){
-  section{ padding-left:0 !important; padding-right:0 !important; }
-  /* Increase body measure breathing */
-  p[style*="max-width: 58ch"], p[style*="max-width: 60ch"]{ max-width:none !important }
-  /* Make capability header wrap cleanly */
-  header[style*="display: flex"]{ gap:0 }
-  header[style*="display: flex"] span{ border-left:none !important; border-top:1px solid var(--color-divider); width:100% }
-  header[style*="display: flex"] span:first-child{ border-top:none }
-}
-@media (max-width: 900px){
-  section[style*="360px"]{ grid-template-columns: 1fr !important; }
+  .nav a:not(.brand):not(.nav-cta){ display:none }
+  section{ padding-top:64px }
+  .services{ grid-template-columns:1fr; gap:32px }
+  .project{ grid-template-columns:1fr; padding:24px 0 }
+  .project p:last-child{ margin-top:8px }
+  .career thead{ display:none }
+  .career, .career tbody, .career tr, .career td{ display:block; width:auto !important }
+  .career tr{ padding:16px 0; border-bottom:1px solid var(--rule) }
+  .career td{ padding:0; border:0 }
+  .career td:nth-child(2){ font-size:14px; margin:2px 0 6px }
+  .form{ padding:24px 20px }
 }
 </style>
-
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
+<header class="nav">
+  <nav class="wrap" aria-label="Primary">
+    <a class="brand" href="#main">David Reich</a>
+    <a href="#services">Services</a>
+    <a href="#experience">Experience</a>
+    <a class="nav-cta" href="#engage">Get in touch</a>
+  </nav>
+</header>
 
+<main id="main" class="wrap">
 
-<header><nav class="nav" aria-label="Primary" style="position: sticky; top: 0; z-index: 5; background: var(--color-bg); max-width: 1296px; margin: 0 auto; padding: 14px clamp(20px, 5vw, 72px)">
-  <span class="nav-brand" style="letter-spacing: 0.04em; text-transform: uppercase">David Reich</span>
-
-  <a href="#services">Services</a>
-  <a href="#experience">Experience</a>
-  <a href="#engage">Engage</a>
-
-</nav></header>
-
-<main id="main" style="max-width: 1296px; margin: 0 auto; padding: 0 var(--pad)">
-
-  <section style="display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 32px clamp(24px, 4vw, 48px); align-items: start; padding: 48px 0 48px; border-bottom: 1px solid var(--color-divider); margin-bottom: 48px">
-    <div style="min-width: 0">
-      <p style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 650; color: var(--color-accent-700); margin: 0 0 18px">South Florida · Since 1986</p>
-      <h1 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(40px, 10vw, 84px); line-height: 0.92; letter-spacing: -0.035em; text-transform: uppercase; margin: 0; text-wrap:balance; font-kerning:normal; font-feature-settings:"kern" 1, "liga" 1; text-rendering:optimizeLegibility">
-        <span style="display: block">David</span>
-        <span style="display: block">Reich</span>
-      </h1>
-      <p style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(16px, 3.8vw, 21px); line-height: 1.3; letter-spacing: 0.11em; text-transform: uppercase; color: var(--color-accent-700); margin: 26px 0 14px; max-width: 22ch">Construction &amp; Development Advisory</p>
-      <p style="font-size: 13px; line-height: 1.6; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-muted); margin: 0; max-width: 36ch">Owner's Representation · Project Leadership · Construction Advisory · Luxury Residential</p>
+  <div class="hero">
+    <div>
+      <p class="eyebrow">South Florida · Since 1986</p>
+      <h1>David Reich</h1>
+      <p class="role">Construction &amp; development advisory</p>
     </div>
-    <div style="padding-top: 6px; min-width: 0">
-      <p style="font-size: 16.5px; line-height: 1.65; margin: 0 0 18px; max-width: 52ch; color: var(--color-text)">I help owners and builders get complicated projects across the finish line. Planning, execution, closeout, delivery — I stay with it.</p>
-      <p style="font-size: 14px; line-height: 1.65; margin: 0 0 18px; max-width: 52ch; color: var(--color-muted)">I have worked every side of the table. Owner’s rep. Ground-up development. General contracting. Buying and repositioning property. Running operations. Hands-on construction management.</p>
-      <p style="font-size: 14px; line-height: 1.65; margin: 0; max-width: 52ch; color: var(--color-muted)">Now I take on a few South Florida projects at a time. You get senior judgment, field knowledge, and a direct line to me.</p>
+    <div class="hero-body">
+      <p class="lede">I help owners and builders get complicated projects across the finish line. Planning, execution, closeout, delivery. I stay with it.</p>
+      <p>I have worked every side of the table. Owner’s rep. Ground-up development. General contracting. Buying and repositioning property. Running operations. Hands-on construction management.</p>
+      <p>Now I take on a few South Florida projects at a time. You get senior judgment, field knowledge, and a direct line to me.</p>
     </div>
-  </section>
+  </div>
 
-
-
-  
-
-  <section id="services" style="padding: 0 0 96px">
-    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">01 · How I can help</span>
-    <hr style="height: 1px; border: 0; margin: 0 0 32px; background: var(--color-divider)" />
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(24px, 3vw, 48px)">
-      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
-        <i aria-hidden="true" class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Owner's Representation</h3>
-        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I represent you in the room. I coordinate architects, consultants and contractors, and I protect your schedule, budget and quality.</p>
+  <section id="services" aria-labelledby="services-h">
+    <div class="section-head"><h2 id="services-h">How I can help</h2></div>
+    <div class="services">
+      <div class="service">
+        <h3>Owner’s representation</h3>
+        <p>I represent you in the room. I coordinate architects, consultants and contractors, and I protect your schedule, budget and quality.</p>
       </div>
-      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
-        <i aria-hidden="true" class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Senior Project Oversight</h3>
-        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">When a project needs more leadership, I step in. I review schedules, resolve field conditions, manage contractors, check quality, and keep reporting clear.</p>
+      <div class="service">
+        <h3>Senior project oversight</h3>
+        <p>When a project needs more leadership, I step in. I review schedules, resolve field conditions, manage contractors, check quality, and keep reporting clear.</p>
       </div>
-      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
-        <i aria-hidden="true" class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Closeout &amp; Turnover</h3>
-        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">The last ten percent is the hardest. I manage punch lists, finish the finishes, coordinate owner and contractor, and push through turnover and TCO.</p>
+      <div class="service">
+        <h3>Closeout &amp; turnover</h3>
+        <p>The last ten percent is the hardest. I manage punch lists, finish the finishes, coordinate owner and contractor, and push through turnover and TCO.</p>
       </div>
-      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
-        <i aria-hidden="true" class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Luxury Interiors &amp; Complex Finishes</h3>
-        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I specialize in high-end interiors where finishes matter. Stone, tile, marble, custom slabs, mosaics, flooring, the details that clients actually see.</p>
+      <div class="service">
+        <h3>Luxury interiors &amp; complex finishes</h3>
+        <p>I specialize in high-end interiors where finishes matter. Stone, tile, marble, custom slabs, mosaics, flooring: the details clients actually see.</p>
       </div>
-      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
-        <i aria-hidden="true" class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 20px">Development &amp; Construction Advisory</h3>
-        <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I advise owners on how to build it right. Planning, strategy, budget, contractor selection, sequence and procurement.</p>
+      <div class="service">
+        <h3>Development &amp; construction advisory</h3>
+        <p>I advise owners on how to build it right. Planning, strategy, budget, contractor selection, sequence and procurement.</p>
       </div>
     </div>
   </section>
 
-  <section id="experience" style="padding: 0 0 96px">
-    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">02 · Selected experience</span>
-    <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider)" />
-
-    <div style="display: grid; grid-template-columns: 48px minmax(0, 4fr) minmax(0, 6fr); gap: 12px clamp(20px, 3vw, 48px); align-items: start; border-top: 1px solid var(--color-divider); padding: 24px 0">
-      <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); line-height: 26px">01</span>
-      <div>
-        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">The Well</h3>
-        <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin: 0">Bay Harbor Islands, Florida</p>
-      </div>
-      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I led closeout for a luxury condo and Class A office in Bay Harbor Islands. Units, offices, amenities, finishes, punch lists and TCO coordination.</p>
-    </div>
-
-    <div style="display: grid; grid-template-columns: 48px minmax(0, 4fr) minmax(0, 6fr); gap: 12px clamp(20px, 3vw, 48px); align-items: start; border-top: 1px solid var(--color-divider); padding: 24px 0">
-      <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); line-height: 26px">02</span>
-      <div>
-        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">Forte Condominium</h3>
-        <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin: 0">West Palm Beach, Florida</p>
-      </div>
-      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I managed high-end finishes for a luxury high-rise in West Palm Beach. Marble, limestone, porcelain, custom slabs and glass, sequenced and tracked across hundreds of installs.</p>
-    </div>
-
-    <div style="display: grid; grid-template-columns: 48px minmax(0, 4fr) minmax(0, 6fr); gap: 12px clamp(20px, 3vw, 48px); align-items: start; border-top: 1px solid var(--color-divider); padding: 24px 0">
-      <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); line-height: 26px">03</span>
-      <div>
-        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">Banyan Tree Residences Sales Gallery</h3>
-        <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin: 0">West Palm Beach, Florida</p>
-      </div>
-      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">I ran tile, stone and wood flooring for the Banyan Tree sales gallery. Crews, schedule, procurement and field coordination across ownership and trades.</p>
-    </div>
-
-    <div style="display: grid; grid-template-columns: 48px minmax(0, 4fr) minmax(0, 6fr); gap: 12px clamp(20px, 3vw, 48px); align-items: start; border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); padding: 24px 0">
-      <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); line-height: 26px">04</span>
-      <div>
-        <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 26px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0 0 8px">$200M Luxury Residential Development</h3>
-        <p style="font-size: 13px; line-height: 20px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin: 0">New York City</p>
-      </div>
-      <p style="font-size: 15px; line-height: 24px; margin: 0; color: var(--color-muted)">As VP Development and Owner’s Rep in New York, I built a 259-unit luxury high-rise. Contracts, budgets, architects, construction and stakeholder coordination, start to finish.</p>
-    </div>
+  <section id="experience" aria-labelledby="experience-h">
+    <div class="section-head"><h2 id="experience-h">Selected experience</h2></div>
+    <ul class="projects">
+      <li class="project">
+        <div><h3>The Well</h3><p class="place">Bay Harbor Islands, Florida</p></div>
+        <p>I led closeout for a luxury condo and Class A office in Bay Harbor Islands. Units, offices, amenities, finishes, punch lists and TCO coordination.</p>
+      </li>
+      <li class="project">
+        <div><h3>Forte Condominium</h3><p class="place">West Palm Beach, Florida</p></div>
+        <p>I managed high-end finishes for a luxury high-rise in West Palm Beach. Marble, limestone, porcelain, custom slabs and glass, sequenced and tracked across hundreds of installs.</p>
+      </li>
+      <li class="project">
+        <div><h3>Banyan Tree Residences Sales Gallery</h3><p class="place">West Palm Beach, Florida</p></div>
+        <p>I ran tile, stone and wood flooring for the Banyan Tree sales gallery. Crews, schedule, procurement and field coordination across ownership and trades.</p>
+      </li>
+      <li class="project">
+        <div><h3>$200M luxury residential development</h3><p class="place">New York City</p></div>
+        <p>As VP Development and Owner’s Rep in New York, I built a 259-unit luxury high-rise. Contracts, budgets, architects, construction and stakeholder coordination, start to finish.</p>
+      </li>
+    </ul>
   </section>
 
-  <section style="padding: 0 0 96px">
-    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">03 · Every side of the table</span>
-    <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider)" />
-    <table class="table" style="table-layout: fixed">
-      <colgroup><col style="width: 30%" /><col style="width: 14%" /><col /></colgroup>
-      <thead>
-        <tr>
-          <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: var(--color-muted)">Role</th>
-          <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: var(--color-muted)">Years</th>
-          <th scope="col" style="font-size: 13px; line-height: 12px; font-weight: 600; padding: 12px 24px 12px 0; color: var(--color-muted)">What it covered</th>
-        </tr>
-      </thead>
+  <section aria-labelledby="career-h">
+    <div class="section-head"><h2 id="career-h">Every side of the table</h2></div>
+    <table class="career">
+      <thead><tr><th scope="col">Role</th><th scope="col">Years</th><th scope="col">What it covered</th></tr></thead>
       <tbody>
-        <tr>
-          <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; vertical-align: middle">Developer / Owner's Rep</td>
-          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); white-space: nowrap; vertical-align: middle">1986–1994</td>
-          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); vertical-align: middle">Major ground-up residential, commercial, retail and mixed-use development.</td>
-        </tr>
-        <tr>
-          <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; vertical-align: middle">Construction Company Principal</td>
-          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); white-space: nowrap; vertical-align: middle">1994–2002</td>
-          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); vertical-align: middle">Founded and operated contracting businesses performing high-end interiors, commercial construction and general contracting.</td>
-        </tr>
-        <tr>
-          <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; vertical-align: middle">Real Estate Owner / Operator</td>
-          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); white-space: nowrap; vertical-align: middle">2002–2006</td>
-          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); vertical-align: middle">Acquisition, repositioning, capital improvements, leasing and management of multifamily properties.</td>
-        </tr>
-        <tr>
-          <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; vertical-align: middle">Operating Executive</td>
-          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); white-space: nowrap; vertical-align: middle">2007–2024</td>
-          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); vertical-align: middle">Seventeen years managing production, procurement, supply chain, vendors, budgeting and business operations.</td>
-        </tr>
-        <tr>
-          <td style="padding: 12px 24px 12px 0; font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; border-bottom: 0; vertical-align: middle">Senior Project Manager</td>
-          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); white-space: nowrap; border-bottom: 0; vertical-align: middle">2024–Present</td>
-          <td style="padding: 12px 24px 12px 0; font-size: 15px; line-height: 24px; color: var(--color-muted); border-bottom: 0; vertical-align: middle">Field-level execution of luxury residential and mixed-use projects in South Florida.</td>
-        </tr>
+        <tr><td>Developer / Owner’s Rep</td><td>1986–1994</td><td>Major ground-up residential, commercial, retail and mixed-use development.</td></tr>
+        <tr><td>Construction company principal</td><td>1994–2002</td><td>Founded and operated contracting businesses performing high-end interiors, commercial construction and general contracting.</td></tr>
+        <tr><td>Real estate owner / operator</td><td>2002–2006</td><td>Acquisition, repositioning, capital improvements, leasing and management of multifamily properties.</td></tr>
+        <tr><td>Operating executive</td><td>2007–2024</td><td>Seventeen years managing production, procurement, supply chain, vendors, budgeting and business operations.</td></tr>
+        <tr><td>Senior project manager</td><td>2024–Present</td><td>Field-level execution of luxury residential and mixed-use projects in South Florida.</td></tr>
       </tbody>
     </table>
   </section>
 
-
-
-  <section id="engage" style="padding: 0 0 40px">
-    <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">04 · Engage David</span>
-    <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider)" />
-    <div style="display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 32px clamp(24px, 4vw, 48px); align-items: start">
-      <div>
-        <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(26px, 3vw, 36px); line-height: 1.08; letter-spacing: 0.01em; text-transform: uppercase; margin: 0 0 16px">Available for select engagements</h2>
-        <ul style="list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; max-width: 52ch">
-          <li style="display: grid; grid-template-columns: 16px 1fr; gap: 10px; font-size: 15px; line-height: 22px"><span style="color: var(--color-accent-700); font-weight: 600; font-size: 12px; line-height: 22px">+</span><span>Owner's representative assignments</span></li>
-          <li style="display: grid; grid-template-columns: 16px 1fr; gap: 10px; font-size: 15px; line-height: 22px"><span style="color: var(--color-accent-700); font-weight: 600; font-size: 12px; line-height: 22px">+</span><span>Construction and development consulting</span></li>
-          <li style="display: grid; grid-template-columns: 16px 1fr; gap: 10px; font-size: 15px; line-height: 22px"><span style="color: var(--color-accent-700); font-weight: 600; font-size: 12px; line-height: 22px">+</span><span>Senior project oversight</span></li>
-          <li style="display: grid; grid-template-columns: 16px 1fr; gap: 10px; font-size: 15px; line-height: 22px"><span style="color: var(--color-accent-700); font-weight: 600; font-size: 12px; line-height: 22px">+</span><span>Project closeout and completion assignments</span></li>
-          <li style="display: grid; grid-template-columns: 16px 1fr; gap: 10px; font-size: 15px; line-height: 22px"><span style="color: var(--color-accent-700); font-weight: 600; font-size: 12px; line-height: 22px">+</span><span>Luxury residential and complex-interior projects</span></li>
+  <section id="engage" aria-labelledby="engage-h">
+    <div class="engage">
+      <div class="engage-intro">
+        <div class="section-head" style="margin-bottom:16px"><h2 id="engage-h">Available for select engagements</h2></div>
+        <p>Tell me where the project stands, where it is, and what is stuck. I will tell you plainly if I am the right person to help.</p>
+        <ul class="engage-list">
+          <li>Owner’s representative assignments</li>
+          <li>Construction and development consulting</li>
+          <li>Senior project oversight</li>
+          <li>Project closeout and completion</li>
+          <li>Luxury residential and complex-interior projects</li>
         </ul>
-        <figure style="margin: 28px 0 0; display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 16px; align-items: center; padding: 16px 20px; background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-card); max-width: 100%; width: 100%; box-sizing: border-box">
-          <div role="img" aria-label="Portrait of David Reich — replace with /images/dr-portrait.jpg" class="image-slot" data-image-id="dr-portrait" style="width:112px; height:112px; aspect-ratio:1; border-radius:50%; background: color-mix(in srgb, var(--color-text) 6%, transparent); border:1.5px dashed color-mix(in srgb, var(--color-text) 14%, transparent); display:flex; align-items:center; justify-content:center; text-align:center; padding:8px; color: var(--color-muted); font-size:11px; line-height:1.3; flex-shrink:0;">Portrait<br><span style="font-size:9px; opacity:0.7">112×112</span></div>
-          <figcaption style="font-size: 13.5px; line-height: 1.5; color: var(--color-muted); overflow-wrap: break-word; word-break: break-word"><span style="font-family: var(--font-heading); font-weight:600; color: var(--color-text); font-size:15px">David Reich</span><br>Forty years in the field. Now taking select South Florida engagements.</figcaption>
-        </figure>
       </div>
-      <div style="position: relative; border: 1px solid var(--color-divider); padding: 24px">
-        <i aria-hidden="true" class="corner tl" style="position: absolute; width: 15px; height: 15px; top: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner tr" style="position: absolute; width: 15px; height: 15px; top: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner bl" style="position: absolute; width: 15px; height: 15px; bottom: -8px; left: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        <i aria-hidden="true" class="corner br" style="position: absolute; width: 15px; height: 15px; bottom: -8px; right: -8px; color: color-mix(in srgb, var(--color-text) 55%, transparent)"></i>
-        
-        <p style="font-size: 15px; line-height: 24px; color: var(--color-muted); margin: 0 0 24px">Tell me where the project stands, where it is, and what is stuck. I will tell you plainly if I am the right person to help.</p>
-        <div style="display: grid; gap: 12px">
-          <div class="field">
-            <label for="dr-email-i">Email <span aria-hidden="true" style="color:var(--color-accent-700)">*</span></label>
-            <input class="input" id="dr-email-i" type="email" placeholder="you@company.com" autocomplete="email" inputmode="email" required aria-required="true" aria-describedby="dr-email-hint dr-email-error" />
-            <div id="dr-email-hint" class="field-hint">We’ll only use this to reply. No newsletter.</div>
-            <div id="dr-email-error" class="error" role="alert"></div>
-          </div>
-          <div class="field">
-            <label for="dr-note-i">The project <span aria-hidden="true" style="color:var(--color-accent-700)">*</span></label>
-            <textarea class="input" id="dr-note-i" placeholder="Location, stage, and what you need." rows="4" required aria-required="true" aria-describedby="dr-note-hint dr-note-error"></textarea>
-            <div id="dr-note-hint" class="field-hint">A few lines is enough, location, stage, what’s stuck.</div>
-            <div id="dr-note-error" class="error" role="alert"></div>
-          </div>
-          <button type="button" class="btn btn-primary btn-block" aria-label="Send project inquiry">Send inquiry</button>
+      <form class="form" id="contact" novalidate>
+        <div class="field">
+          <label for="email">Email</label>
+          <input class="input" id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required aria-describedby="email-hint">
+          <p id="email-hint" class="hint">Only used to reply.</p>
         </div>
-      </div>
+        <div class="field">
+          <label for="note">The project</label>
+          <textarea class="input" id="note" name="note" rows="4" placeholder="Location, stage, and what’s stuck." required></textarea>
+        </div>
+        <button type="submit" class="btn">Send inquiry</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
-</section>
-
-  <footer style="display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: baseline; border-top: 1px solid var(--color-divider); padding: 24px 0 48px; font-size: 13px; line-height: 24px; color: var(--color-muted)">
-    <span style="font-family: var(--font-heading); font-weight: 600; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text); margin-right: auto">David Reich · Construction &amp; Development Advisory</span>
-    <span>South Florida</span>
-    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="View full professional history on LinkedIn (opens in new tab)"><span aria-hidden="true">↗</span> View full professional history on LinkedIn</a>
-  </footer>
-</div>
+  </section>
 
 </main>
-<footer style="max-width:1296px; margin:0 auto; padding: 24px clamp(20px,5vw,72px) 56px; border-top:1px solid var(--color-divider); display:flex; flex-wrap:wrap; gap:14px 42px; font-size:13px; color:var(--color-muted)">
-  <span style="font-family:var(--font-heading); font-weight:600; color:var(--color-text); margin-right:auto">© 2026 David Reich, Construction & Development Advisory</span>
-  <span>South Florida · Miami · Fort Lauderdale · Palm Beach</span>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© 2026 David Reich</span>
+    <span>Miami · Fort Lauderdale · Palm Beach</span>
+  </div>
 </footer>
-<!-- Content is maintainable: edit this file directly, or replace image-slot divs with <img src="/images/dr-portrait.jpg">. Contact form posts to /api/contact (wire up in Vercel Functions when ready). -->
+
 <script>
-// Minimal contact handler, replace with real endpoint when you attach a form service
-document.querySelectorAll('.btn.btn-primary.btn-block').forEach(btn => {
-  if (btn.textContent.trim() === 'Send') {
-    btn.addEventListener('click', () => {
-      const email = document.querySelector('#dr-email-i, #dr-email-b, #dr-email')?.value?.trim();
-      const note = document.querySelector('#dr-note-i, #dr-note-b, #dr-note')?.value?.trim();
-      if (!email || !note) { alert('Add your email and a short note about the project.'); return; }
-      // TODO: wire to real contact email before publishing — form currently shows interim message
-      alert('Thanks for your inquiry. The contact form will be wired to David\'s real email before launch — for now, please check back soon.'); return;
-    });
-  }
+// Contact form. Not yet connected to an inbox: set CONTACT_ENDPOINT (e.g. a Formspree URL) to go live.
+const CONTACT_ENDPOINT = '';
+const form = document.getElementById('contact');
+const status = document.getElementById('form-status');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  status.className = 'form-status';
+  const email = form.email.value.trim();
+  const note = form.note.value.trim();
+  if (!form.email.checkValidity() || !email) { status.textContent = 'Please enter a valid email.'; status.classList.add('err'); form.email.focus(); return; }
+  if (!note) { status.textContent = 'Add a few lines about the project.'; status.classList.add('err'); form.note.focus(); return; }
+  if (!CONTACT_ENDPOINT) { status.textContent = 'Thanks. The inquiry form is being connected; please check back shortly.'; return; }
+  try {
+    const r = await fetch(CONTACT_ENDPOINT, { method:'POST', headers:{ 'Accept':'application/json', 'Content-Type':'application/json' }, body: JSON.stringify({ email, note }) });
+    if (!r.ok) throw new Error();
+    form.reset();
+    status.textContent = 'Thanks. I’ll be in touch.';
+  } catch { status.textContent = 'Something went wrong. Please try again.'; status.classList.add('err'); }
 });
 </script>
 </body>
