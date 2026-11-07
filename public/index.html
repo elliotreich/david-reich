@@ -45,6 +45,8 @@ html{ scroll-behavior:smooth; scroll-padding-top:72px }
 body{ margin:0; background:var(--bg); color:var(--text); font:16px/1.6 var(--sans); -webkit-font-smoothing:antialiased; text-wrap:pretty }
 h1, h2, h3{ font-family:var(--serif); font-weight:400; margin:0; text-wrap:balance }
 p{ margin:0 }
+/* Justify running copy while keeping headings, navigation, and form labels readable. */
+main p, .proof dd, .career td:last-child{ text-align:justify; hyphens:auto }
 a{ color:var(--accent); text-underline-offset:3px; text-decoration-thickness:1px }
 a:hover{ color:var(--accent-dark) }
 :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px }
@@ -114,6 +116,7 @@ section{ padding:80px 0 0 }
 /* Engage */
 .engage{ display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); gap:48px 72px; align-items:start }
 .engage-intro p{ color:var(--muted); max-width:44ch }
+.engage-intro p + p{ margin-top:12px }
 
 .form{ display:grid; gap:20px; padding:32px; background:#fff; border:1px solid var(--rule); border-radius:8px }
 .field label{ display:block; font-size:14px; font-weight:500; margin-bottom:6px }
