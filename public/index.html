@@ -70,15 +70,12 @@ a:hover{ color:var(--accent-dark) }
 .lede{ font-size:clamp(19px, 1.9vw, 22px); line-height:1.5; margin-bottom:20px; max-width:34ch }
 .hero-body p + p{ margin-top:12px }
 .hero-body p:not(.lede){ color:var(--muted); max-width:52ch }
+.hero-body .roles{ font-size:14px; letter-spacing:.01em; max-width:56ch }
 
 .cta{ display:flex; flex-wrap:wrap; gap:12px; margin-top:28px }
 .btn-ghost{ display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 22px; border:1px solid var(--field-border); border-radius:6px; color:var(--text); font:500 15px var(--sans); text-decoration:none }
 .btn-ghost:hover{ color:var(--text); background:color-mix(in srgb, var(--text) 5%, transparent) }
 a.btn{ text-decoration:none } a.btn:hover{ color:#fff }
-.proof{ display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:24px 40px; margin:0; padding:32px 0; border-bottom:1px solid var(--rule) }
-.proof div{ min-width:0 }
-.proof dt{ font-family:var(--serif); font-size:clamp(26px, 2.8vw, 32px); line-height:1.1 }
-.proof dd{ margin:6px 0 0; font-size:15px; color:var(--muted); max-width:28ch }
 .throughline{ color:var(--muted); max-width:62ch; margin:-12px 0 28px }
 select.input{ background-image:linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position:calc(100% - 20px) 55%, calc(100% - 14px) 55%; background-size:6px 6px; background-repeat:no-repeat; padding-right:40px }
 .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px }
@@ -144,7 +141,6 @@ textarea.input{ resize:vertical; min-height:120px }
   .hero-body p:not(.lede){ max-width:62ch }
 }
 @media (max-width: 960px){
-  .proof{ grid-template-columns:1fr }
   .engage{ grid-template-columns:1fr }
 }
 @media (max-width: 860px){
@@ -156,7 +152,6 @@ textarea.input{ resize:vertical; min-height:120px }
   section{ padding-top:64px }
   .services{ grid-template-columns:1fr; gap:32px }
   .field-row{ grid-template-columns:1fr }
-  .proof{ gap:16px }
   .career thead{ display:none }
   .career, .career tbody, .career tr, .career td{ display:block; width:auto !important }
   .career tr{ padding:16px 0; border-bottom:1px solid var(--rule) }
@@ -187,18 +182,13 @@ textarea.input{ resize:vertical; min-height:120px }
       <p class="role">Senior construction and development leader in South Florida</p>
     </div>
     <div class="hero-body">
-      <p class="lede">I lead complex projects to completion for owners and developers, from initial planning through closeout and delivery. I remain accountable through every phase until final completion.</p>
-      <p>My experience spans multiple sides of the industry, including owner’s representation, ground-up development, general contracting, property acquisition and operations, and hands-on construction management.</p>
-      <p>Seeking a senior leadership role with a South Florida owner, developer, or builder, including Director of Construction, Director of Project Management, Owner’s Representative, Senior Construction Manager, or Project Executive.</p>
+      <p class="lede">I lead complex projects to completion for owners and developers, from initial planning through closeout, and stay accountable until the work is done.</p>
+      <p>Forty years on every side of the business: developer, contractor, owner, operator. I led Gramercy Place, a $200M, 259-unit Manhattan high-rise, for the owner, and since 2024 I have taken three South Florida luxury projects through closeout.</p>
+      <p>Seeking a senior leadership role with a South Florida owner, developer, or builder.</p>
+      <p class="roles">Director of Construction · Director of Project Management · Owner’s Representative · Senior Construction Manager · Project Executive</p>
       <div class="cta"><a class="btn" href="#experience">View experience and projects</a><a class="btn-ghost" href="#engage">Get in touch</a></div>
     </div>
   </div>
-
-  <dl class="proof" aria-label="At a glance">
-    <div><dt>$200M</dt><dd>Gramercy Place — 259-unit Manhattan high-rise, led for the owner</dd></div>
-    <div><dt>40 years</dt><dd>Developer, contractor, owner and operator</dd></div>
-    <div><dt>3</dt><dd>South Florida luxury projects since 2024, through closeout</dd></div>
-  </dl>
 
   <section id="experience" aria-labelledby="experience-h">
     <div class="section-head"><h2 id="experience-h">Selected experience</h2></div>
