@@ -45,8 +45,6 @@ html{ scroll-behavior:smooth; scroll-padding-top:72px }
 body{ margin:0; background:var(--bg); color:var(--text); font:16px/1.6 var(--sans); -webkit-font-smoothing:antialiased; text-wrap:pretty }
 h1, h2, h3{ font-family:var(--serif); font-weight:400; margin:0; text-wrap:balance }
 p{ margin:0 }
-/* Justify running copy while keeping headings, navigation, and form labels readable. */
-main p, .proof dd, .career td:last-child{ text-align:justify; hyphens:auto }
 a{ color:var(--accent); text-underline-offset:3px; text-decoration-thickness:1px }
 a:hover{ color:var(--accent-dark) }
 :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px }
@@ -137,10 +135,21 @@ textarea.input{ resize:vertical; min-height:120px }
 .footer a{ color:var(--accent-dark); text-underline-offset:3px }
 
 /* Responsive */
-@media (max-width: 960px){
+@media (max-width: 1120px){
+  .hero{ gap:32px 48px }
+}
+@media (max-width: 1024px){
   .hero{ grid-template-columns:1fr; align-items:start; padding:56px 0 56px }
+  .lede{ max-width:44ch }
+  .hero-body p:not(.lede){ max-width:62ch }
+}
+@media (max-width: 960px){
   .proof{ grid-template-columns:1fr }
   .engage{ grid-template-columns:1fr }
+}
+@media (max-width: 860px){
+  .project{ grid-template-columns:1fr; padding:24px 0 }
+  .project p:last-child{ margin-top:8px }
 }
 @media (max-width: 640px){
   .nav a:not(.brand):not(.nav-cta){ display:none }
@@ -148,8 +157,6 @@ textarea.input{ resize:vertical; min-height:120px }
   .services{ grid-template-columns:1fr; gap:32px }
   .field-row{ grid-template-columns:1fr }
   .proof{ gap:16px }
-  .project{ grid-template-columns:1fr; padding:24px 0 }
-  .project p:last-child{ margin-top:8px }
   .career thead{ display:none }
   .career, .career tbody, .career tr, .career td{ display:block; width:auto !important }
   .career tr{ padding:16px 0; border-bottom:1px solid var(--rule) }
